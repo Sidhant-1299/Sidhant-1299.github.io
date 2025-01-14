@@ -1,0 +1,30 @@
+import React from "react";
+import { scrollIntoViewWithID } from "../../utils";
+
+function NavBarItem({ icon, label, ID }) {
+  return (
+    <div
+      className="w-full cursor-pointer group"
+      onClick={() => scrollIntoViewWithID(ID)}
+    >
+      <div
+        className="mx-auto h-full w-full 
+        py-2 flex items-center justify-center
+      "
+      >
+        {icon}
+      </div>
+      {/* Label only renders on hover */}
+      <div
+        className="text-xs px-1 text-white opacity-0 -translate-y-4
+        laptop:group-hover:opacity-100 laptop:group-hover:translate-y-2 
+        duration-500 ease-in-out bg-gray rounded-lg text-center 
+        "
+      >
+        {label}
+      </div>
+    </div>
+  );
+}
+
+export default NavBarItem;
