@@ -7,7 +7,10 @@ import { FaRegFolder } from "react-icons/fa";
 import { FaRegPenToSquare } from "react-icons/fa6";
 function NavBar() {
   return (
-    <div className="w-fullfixed top-0 mx-auto py-8">
+    <div
+      className="w-full fixed top-0 mx-auto bg-black 
+    py-6 tablet:py-8"
+    >
       <div
         className="w-[280px] tablet:w-[360px] bg-gray flex rounded-3xl text-white
          px-[2px] tablet:px-2

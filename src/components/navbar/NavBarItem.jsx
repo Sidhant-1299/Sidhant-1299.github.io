@@ -16,9 +16,10 @@ function NavBarItem({ icon, label, ID }) {
       </div>
       {/* Label only renders on hover */}
       <div
-        className="text-xs px-1 text-white opacity-0 -translate-y-4
+        className="text-xs  text-white opacity-0 -translate-y-4
+        laptop:px-2
         laptop:group-hover:opacity-100 laptop:group-hover:translate-y-2 
-        duration-500 ease-in-out bg-gray rounded-lg text-center 
+        duration-300 ease-in-out bg-gray rounded-lg text-center 
         "
       >
         {label}
