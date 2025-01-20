@@ -12,7 +12,7 @@ function ProfileCard() {
       className=" laptop:fixed
       bg-whitenoise rounded-3xl
       mx-auto
-      h-[440px] w-[90%] 
+      h-[480px] w-[90%] 
       tablet:h-[500px] tablet:w-[80%]
       laptop:h-[560px] laptop:w-[340px]
     desktop:h-[600px] desktop:w-[400px] 
@@ -22,7 +22,7 @@ function ProfileCard() {
     >
       <div
         className=" bg-graydark bg-opacity-[0.93] rounded-2xl
-        tablet:pt-2 laptop:pt-1
+        pt-1 tablet:pt-2 laptop:pt-1
         h-full w-full pb-1
     laptop:pb-2
     "
