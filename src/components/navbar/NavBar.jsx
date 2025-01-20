@@ -9,7 +9,7 @@ function NavBar() {
   return (
     <div
       className="w-full fixed top-0 mx-auto bg-black 
-    py-6 tablet:py-8"
+    py-6 tablet:py-8 z-10"
     >
       <div
         className="w-[280px] tablet:w-[360px] bg-gray flex rounded-3xl text-white

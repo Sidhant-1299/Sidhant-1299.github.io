@@ -1,11 +1,11 @@
 import React from "react";
-import { scrollIntoViewWithID } from "../../utils";
+import { scrollIntoViewWithID, scrollIntoViewWithOffset } from "../../utils";
 
 function NavBarItem({ icon, label, ID }) {
   return (
     <div
       className="w-full cursor-pointer group"
-      onClick={() => scrollIntoViewWithID(ID)}
+      onClick={() => scrollIntoViewWithOffset(ID)}
     >
       <div
         className="mx-auto h-full w-full 

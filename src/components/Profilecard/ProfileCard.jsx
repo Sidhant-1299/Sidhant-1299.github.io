@@ -4,62 +4,94 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa";
 import ProfileCardIcon from "./ProfileCardIcon";
+import { name, intro, email, twitter, linkedIn } from "../Data/ProfileCardData";
 
 function ProfileCard() {
-  const name = "Sidhant Raj Khati";
-  const intro = (
-    <>
-      A passionate Data Science and Analytics enthusiast with a knack for
-      uncovering stories hidden within data to solve real-world problems.
-    </>
-  );
-  const email = "sidhant.raj.khati@gmail.com";
-  const twitter = "https://x.com/SidhantRajKhati";
-  const linkedIn = "https://www.linkedin.com/in/sidhant-raj-khati-728086245/";
-
   return (
     <div
-      className=" bg-white rounded-xl 
-      h-96 w-48
-    laptop:h-[50vh] laptop:w-[380px]
+      className=" laptop:fixed 
+
+      
     "
     >
-      {/* IMAGE */}
       <div
-        className="
-      laptop:h-3/5 w-full flex items-center justify-center laptop:pt-4"
+        className=" bg-graylight rounded-2xl
+        tablet:mt-2 laptop:mt-1
+        mx-auto
+      h-[440px] w-[90%] 
+      tablet:h-[500px] tablet:w-[80%]
+      laptop:h-[560px] laptop:w-[340px]
+    desktop:h-[600px] desktop:w-[400px] 
+    laptop:pb-2
+    "
       >
-        <img
-          src={sidhant}
-          className="h-[92%] mx-auto my-auto w-[80%] rounded-xl 
-          
+        {/* IMAGE */}
+        <div
+          className="
+          h-3/5
+      laptop:h-[65%] w-full flex items-center justify-center 
+      laptop:pt-4 desktop:pt-3 tablet:pt-4"
+        >
+          <img
+            src={sidhant}
+            className="h-full mx-auto my-auto  rounded-xl mt-4
+            laptop:w-[82%] desktop:w-[80%]
+
           "
-        ></img>
-      </div>
-      {/* Name */}
-      <div className="h-2/5 w-full">
-        <div className="laptop:h-2/5 w-full text-center laptop:pt-4">
-          <span
-            className="text-xl font-bold text-black 
-          
-          
-          "
-          >
-            {name}
-          </span>
+          ></img>
         </div>
-        <div className="h-3/5 laptop:w-full flex flex-col items-center justify-center">
-          {/* Description */}
-          <div className="laptop:h-3/5 laptop:w-full text-sm text-gray text-center laptop:px-5">
-            {intro}
+        {/* Name and descrption */}
+        <div
+          className="h-2/5 laptop:h-[35%] w-full 
+        mt-2 laptop:mt-0"
+        >
+          {/* NAME */}
+          <div
+            className="h-2/5 laptop:h-2/5
+             w-full text-center 
+          pt-6 laptop:pt-8"
+          >
+            <span
+              className="text-xl tablet:text-2xl font-bold text-black
+          "
+            >
+              {name}
+            </span>
           </div>
-          <div className="flex laptop:h-2/5 laptop:w-full justify-center items-center mx-auto">
-            <ProfileCardIcon icon={<FaLinkedin />} link={linkedIn} />
-            <ProfileCardIcon
-              icon={<MdMailOutline />}
-              link={`mailto:${email}`}
-            />
-            <ProfileCardIcon icon={<FaTwitter />} link={twitter} />
+
+          {/* DESCRIPTION AND LINK ICONS */}
+          <div
+            className="h-3/5 laptop:w-full flex flex-col items-center justify-center
+            laptop:pt-0"
+          >
+            {/* Description */}
+            <div
+              className="
+            text-gray text-center 
+            h-3/5 laptop:h-3/5 
+            w-[95%] tablet:w-[85%] laptop:w-full 
+            text-xs tablet:text-sm 
+            px-4 laptop:px-5 
+            "
+            >
+              {intro}
+            </div>
+            {/* ICONS */}
+            <div
+              className="flex 
+             h-2/5 laptop:h-2/5 
+              laptop:w-full justify-center items-center mx-auto 
+            desktop:pb-4 pb-8 laptop:pb-0
+            pt-3 tablet:pt-0  laptop:pt-1 desktop:pt-0
+            laptop:my-auto desktop:my-0"
+            >
+              <ProfileCardIcon icon={<FaLinkedin />} link={linkedIn} />
+              <ProfileCardIcon
+                icon={<MdMailOutline />}
+                link={`mailto:${email}`}
+              />
+              <ProfileCardIcon icon={<FaTwitter />} link={twitter} />
+            </div>
           </div>
         </div>
       </div>
