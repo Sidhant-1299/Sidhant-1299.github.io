@@ -3,7 +3,6 @@ import PageHeader from "../PageHeader";
 import { header, introduction } from "../Data/HomeData";
 import BoxedComponentCV from "./BoxedComponentCV";
 import BoxedComponentGithub from "./BoxedComponentGithub";
-import { primaryBg, secondaryBg } from "../../Theme";
 
 function Home() {
   return (
@@ -11,11 +10,12 @@ function Home() {
       id="home"
       className="
       bg-black
-      pl-4
+      tablet:pt-12 laptop:pt-0
+      laptop:pl-8
      pb-8
     "
     >
-      <PageHeader header={header.toUpperCase()} />
+      <PageHeader header={header} />
       {/* INTRODUCTION */}
       <div
         className="
@@ -26,7 +26,7 @@ function Home() {
       >
         <h1
           className=" text-graylight text-lg
-      py-10
+      py-10 text-justify
       "
         >
           {introduction}
@@ -36,7 +36,7 @@ function Home() {
       <div
         className="flex 
         laptop:pt-8
-       gap-3 tablet:gap-6 laptop:gap-8 
+       gap-5 tablet:gap-6 laptop:gap-8 
        laptop:ml-1
        items-center justify-center
        laptop:justify-start

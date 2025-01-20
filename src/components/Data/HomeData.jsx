@@ -6,3 +6,4 @@ export const introduction =
       and drive meaningful change";
 
 export const githubURL = "https://github.com/Sidhant-1299/";
+export const resumeURL = "https://youtube.com";

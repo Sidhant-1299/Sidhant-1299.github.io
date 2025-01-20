@@ -3,9 +3,13 @@ import { openInNewTab } from "../../utils";
 import { IconContext } from "react-icons/lib";
 
 function ProfileCardIcon({ icon, link }) {
+  // const color = "#F87171";
+  const color = "#FB923C";
+  // const color = "#FACC15";
+  const iconSize = "22px";
   if (link.startsWith("mailto:")) {
     return (
-      <IconContext.Provider value={{ color: "#6B21A8", size: "20px" }}>
+      <IconContext.Provider value={{ color: color, size: iconSize }}>
         <div
           className="px-4 cursor-pointer hover:scale-125 duration-300"
           onClick={(e) => {
@@ -19,7 +23,7 @@ function ProfileCardIcon({ icon, link }) {
     );
   } else {
     return (
-      <IconContext.Provider value={{ color: "#6B21A8", size: "20px" }}>
+      <IconContext.Provider value={{ color: color, size: iconSize }}>
         <div
           className="px-4 cursor-pointer hover:scale-125 duration-300"
           onClick={() => openInNewTab(link)}

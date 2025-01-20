@@ -19,7 +19,13 @@ export default {
         white: "#f2f2f2",
         black: "#151312",
         gray: "#353334",
-        graylight: "#d4d4d4",
+        graydark: "#1c1b1b",
+        graylight: "#c7c7c7",
+      },
+      backgroundImage: {
+        whitenoise: "url('/src/assets/whitenoise.png')",
+        "custom-gradient":
+          "linear-gradient(to right, #fbbf24, #fb923c, #ef4444)",
       },
       keyframes: {
         wiggle: {

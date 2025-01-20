@@ -9,19 +9,21 @@ import { name, intro, email, twitter, linkedIn } from "../Data/ProfileCardData";
 function ProfileCard() {
   return (
     <div
-      className=" laptop:fixed 
-
-      
-    "
-    >
-      <div
-        className=" bg-graylight rounded-2xl
-        tablet:mt-2 laptop:mt-1
-        mx-auto
+      className=" laptop:fixed
+      bg-whitenoise rounded-3xl
+      mx-auto
       h-[440px] w-[90%] 
       tablet:h-[500px] tablet:w-[80%]
       laptop:h-[560px] laptop:w-[340px]
     desktop:h-[600px] desktop:w-[400px] 
+    
+      
+    "
+    >
+      <div
+        className=" bg-graydark bg-opacity-[0.93] rounded-2xl
+        tablet:pt-2 laptop:pt-1
+        h-full w-full pb-1
     laptop:pb-2
     "
       >
@@ -29,7 +31,7 @@ function ProfileCard() {
         <div
           className="
           h-3/5
-      laptop:h-[65%] w-full flex items-center justify-center 
+      desktop:h-[65%] w-full flex items-center justify-center 
       laptop:pt-4 desktop:pt-3 tablet:pt-4"
         >
           <img
@@ -42,7 +44,7 @@ function ProfileCard() {
         </div>
         {/* Name and descrption */}
         <div
-          className="h-2/5 laptop:h-[35%] w-full 
+          className="h-2/5 desktop:h-[35%] w-full 
         mt-2 laptop:mt-0"
         >
           {/* NAME */}
@@ -52,7 +54,7 @@ function ProfileCard() {
           pt-6 laptop:pt-8"
           >
             <span
-              className="text-xl tablet:text-2xl font-bold text-black
+              className="text-xl tablet:text-2xl  font-bold text-white
           "
             >
               {name}
@@ -67,11 +69,12 @@ function ProfileCard() {
             {/* Description */}
             <div
               className="
-            text-gray text-center 
+            text-graylight 
             h-3/5 laptop:h-3/5 
             w-[95%] tablet:w-[85%] laptop:w-full 
+            desktop:w-[94%]
             text-xs tablet:text-sm 
-            px-4 laptop:px-5 
+            px-4 laptop:px-5 text-justify
             "
             >
               {intro}

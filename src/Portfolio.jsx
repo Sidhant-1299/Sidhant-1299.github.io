@@ -10,7 +10,6 @@ function Portfolio() {
       flex-col laptop:flex-row
 
       mx-auto bg-black
-    border-4 border-amber-600
     "
     >
       {/* ProfileCard Component - Fixed */}
