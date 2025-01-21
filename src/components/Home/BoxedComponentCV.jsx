@@ -42,6 +42,7 @@ function BoxedComponentCV() {
             duration-300
            absolute 
            bottom-2 right-3
+           tablet:bottom-3 tablet:right-3
            laptop:bottom-6 laptop:right-9"
           >
             <IconContext.Provider value={{ color: "white", size: "16px" }}>

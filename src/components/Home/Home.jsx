@@ -10,7 +10,7 @@ function Home() {
       id="home"
       className="
       bg-black
-      tablet:pt-12 laptop:pt-0
+      tablet:pt-8 laptop:pt-0
       laptop:pl-8
      pb-8
     "

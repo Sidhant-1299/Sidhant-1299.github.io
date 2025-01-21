@@ -1,5 +1,5 @@
 import React from "react";
-import { scrollIntoViewWithID, scrollIntoViewWithOffset } from "../../utils";
+import { scrollIntoViewWithOffset } from "../../utils";
 
 function NavBarItem({ icon, label, ID }) {
   return (

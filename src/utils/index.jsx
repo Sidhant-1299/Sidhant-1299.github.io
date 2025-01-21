@@ -15,7 +15,7 @@ export const scrollIntoViewWithOffset = (id) => {
   //might need to change this
   //add a ternary operator that changes navbar height according to window height
   // const navBarOffset = -128;
-  const navBarOffset = windowWidth >= 1024 ? -128 : -96;
+  const navBarOffset = windowWidth >= 1024 ? -108 : -96;
   const y = element.getBoundingClientRect().top + window.scrollY + navBarOffset;
   window.scrollTo({ top: y, behavior: "smooth" });
 };

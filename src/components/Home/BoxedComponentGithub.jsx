@@ -36,8 +36,9 @@ function BoxedComponentGithub() {
           className="laptop:group-hover:translate-x-6
            duration-300
         absolute 
-        laptop:bottom-8 laptop:right-12
-        bottom-2 right-3
+        laptop:bottom-6 laptop:right-10
+        bottom-0 right-3
+        tablet:bottom-2 tablet:right-3
         "
         >
           <IconContext.Provider value={{ color: "black", size: "18px" }}>

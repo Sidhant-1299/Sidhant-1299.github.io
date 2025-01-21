@@ -9,7 +9,7 @@ function Projects() {
       id="projects"
       className="laptop:pl-4
      mt-16 tablet:mt-20 laptop:mt-24
-     tablet:pt-12 laptop:pt-0
+     tablet:pt-8 laptop:pt-0
      w-[90%] laptop:w-[95%] mx-auto
      "
     >
