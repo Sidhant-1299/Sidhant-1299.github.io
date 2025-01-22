@@ -11,7 +11,7 @@ function SkillsContainer() {
       w-[80%] 
       tablet:w-[90%]
       laptop:w-full 
-      mx-auto laptop:ml-4
+      mx-auto
       mt-12
       tablet:mt-14
       laptop:mt-16 laptop:mb-16

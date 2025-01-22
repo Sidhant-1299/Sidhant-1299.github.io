@@ -20,3 +20,8 @@ export const scrollIntoViewWithOffset = (id) => {
   const y = element.getBoundingClientRect().top + window.scrollY + navBarOffset;
   window.scrollTo({ top: y, behavior: "smooth" });
 };
+
+export const isValidEmail = (email) => {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+};

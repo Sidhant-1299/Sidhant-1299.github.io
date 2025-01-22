@@ -21,7 +21,7 @@ function ProfileCard() {
     "
     >
       <div
-        className=" bg-graydark bg-opacity-90 rounded-2xl
+        className=" bg-graydark bg-opacity-[0.93] rounded-2xl
         pt-1 tablet:pt-2 laptop:pt-1
         h-full w-full pb-1
     laptop:pb-2

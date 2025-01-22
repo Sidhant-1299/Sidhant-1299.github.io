@@ -7,7 +7,7 @@ function Academic() {
     <div
       id="education"
       className="tablet:pt-8 laptop:pt-0
-      laptop:pl-8
+      laptop:pl-6
         pb-8
         w-[90%] laptop:w-[95%] mx-auto"
     >

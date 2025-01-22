@@ -9,7 +9,7 @@ function AcademicContainer() {
     <div
       className="
       w-full h-full
-      mt-8 tablet:mt-10 laptop:mt-0
+      mt-4 tablet:mt-10 laptop:mt-0
      py-8 tablet:py-2 laptop:py-12
     
   

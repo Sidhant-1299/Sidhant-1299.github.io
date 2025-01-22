@@ -3,6 +3,7 @@ import Home from "./Home/Home";
 import Projects from "./Project/Projects";
 import Skills from "./Skills/Skills";
 import Academic from "./Academic/Academic";
+import Contact from "./Contact/Contact";
 
 //Contains all component fo scrollable content
 
@@ -20,6 +21,7 @@ function ScrollableContent() {
       <Projects />
       <Skills />
       <Academic />
+      <Contact />
       {[...Array(50)].map((_, i) => (
         <h1 key={i} className="text-white text-center my-4 text-xl">
           Hello World
