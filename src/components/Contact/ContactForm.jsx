@@ -99,10 +99,10 @@ function ContactForm() {
             mt-12 tablet:mt-16
             h-9 tablet:h-11 laptop:h-12
             rounded-xl
-            bg-orange-400
+            bg-custom-gradient
             w-full
             font-bold
-            text-xs tablet:text-sm text-white
+            text-sm tablet:text-base text-white
             hover:bg-opacity-90 duration-300"
             onClick={formHandler}
           >

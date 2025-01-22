@@ -73,7 +73,8 @@ function AcademicCard({ img, course, name, date, url }) {
             text-white
             text-base
             tablet:text-xl font-bold
-            group-hover:text-orange-400
+            group-hover:bg-clip-text group-hover:text-transparent
+         group-hover:bg-custom-gradient
             "
             >
               {name}

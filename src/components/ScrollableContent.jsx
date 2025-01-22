@@ -4,6 +4,7 @@ import Projects from "./Project/Projects";
 import Skills from "./Skills/Skills";
 import Academic from "./Academic/Academic";
 import Contact from "./Contact/Contact";
+import Copyright from "./Copyright";
 
 //Contains all component fo scrollable content
 
@@ -22,6 +23,9 @@ function ScrollableContent() {
       <Skills />
       <Academic />
       <Contact />
+      <div>
+        <Copyright />
+      </div>
     </div>
   );
 }

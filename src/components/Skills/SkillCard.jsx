@@ -50,13 +50,13 @@ function SkillCard({ icon, url, name }) {
       {/* DISAPPEARS FOR TOUCH SCREENS */}
       <div className="h-full hidden laptop:block">
         {/* NAME */}
-        {/* group-hover:bg-clip-text group-hover:text-transparent
-         group-hover:bg-custom-gradient */}
         <h1
           className="text-graylight font-bold my-auto
           laptop:text-lg
         laptop:py-10 laptop:pl-12
-        group-hover:text-orange-400
+        
+        group-hover:bg-clip-text group-hover:text-transparent
+         group-hover:bg-custom-gradient
 
         "
         >

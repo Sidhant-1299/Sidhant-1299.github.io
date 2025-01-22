@@ -5,13 +5,13 @@ function Copyright() {
   const year = new Date().getFullYear();
   return (
     <div
-      className="w-full flex items-center justify-center 
-    pb-12
-    tablet:pb-16"
+      className="w-full flex items-center tablet:justify-center laptop:justify-start
+      pb-12
+      tablet:pb-16"
     >
       <h1
-        className="text-orange-400
-      text-lg tablet:text-xl "
+        className="bg-clip-text text-transparent bg-custom-gradient
+        text-lg tablet:text-2xl "
       >
         © {name} {year}
       </h1>

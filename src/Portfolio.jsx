@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileCard from "./components/Profilecard/ProfileCard";
 import ScrollableContent from "./components/ScrollableContent";
+import Copyright from "./components/Copyright";
 
 function Portfolio() {
   return (

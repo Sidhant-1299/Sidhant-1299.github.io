@@ -1,19 +1,28 @@
 import React from "react";
+import { useState } from "react";
 import PageHeader from "../PageHeader";
 import { header, introduction } from "../Data/HomeData";
 import BoxedComponentCV from "./BoxedComponentCV";
 import BoxedComponentGithub from "./BoxedComponentGithub";
+import useIntersectionObserver from "../../utils/useInterSectionObserver";
 
 function Home() {
+  const { ref, isVisible } = useIntersectionObserver();
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  if (isVisible && !hasAnimated) {
+    setHasAnimated(true);
+  }
   return (
     <div
       id="home"
-      className="
-      bg-black
+      ref={ref}
+      className={`bg-black
       tablet:pt-8 laptop:pt-0
       laptop:pl-8
-     pb-8
-    "
+     pb-8 ${
+       hasAnimated ? "translate-y-2 opacity-100" : "-translate-y-2 opacity-0"
+     } duration-700`}
     >
       <PageHeader header={header} />
       {/* INTRODUCTION */}

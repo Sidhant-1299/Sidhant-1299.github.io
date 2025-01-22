@@ -34,7 +34,9 @@ function ProjectCard({ img, header, description, url }) {
           h-1/2 
           w-[90%] mx-auto
           flex
-          group-hover:text-orange-400 text-white items-center justify-center"
+          group-hover:bg-clip-text group-hover:text-transparent
+         group-hover:bg-custom-gradient 
+          text-white items-center justify-center"
           >
             <h1
               className="
