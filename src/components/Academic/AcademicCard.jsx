@@ -33,7 +33,7 @@ function AcademicCard({ img, course, name, date, url }) {
           w-1/4
           tablet:w-1/5
            flex items-center justify-start
-        pl-4 tablet:pl-8 laptop:pl-6
+        pl-4 tablet:pl-4 laptop:pl-6
 
 
         "

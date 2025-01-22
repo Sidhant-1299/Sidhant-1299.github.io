@@ -1,15 +1,13 @@
 import React from "react";
 
 function Tooltip({ message, position = "top" }) {
-  {
-    /* Tooltip */
-  }
   return (
     <div
-      className={`absolute z-10 hidden group-focus-within:flex items-center px-4 py-2
-         bg-white border border-gray-300 rounded shadow-md text-gray-800 text-sm ${
-           position === "top" ? "bottom-full mb-2" : "top-full mt-2"
-         }`}
+      className={`absolute z-10 flex items-center px-4 py-1 tablet:py-2 bg-white border border-gray-300 rounded-lg shadow-md text-gray-800 text-sm ${
+        position === "top"
+          ? "bottom-full right-0 mb-2"
+          : "top-full right-0 mt-1"
+      }`}
     >
       <div
         className={`absolute ${
@@ -21,10 +19,14 @@ function Tooltip({ message, position = "top" }) {
         }`}
       ></div>
       <div className="flex items-center">
-        <span role="img" aria-label="warning" className="text-orange-500 mr-2">
+        <span
+          role="img"
+          aria-label="warning"
+          className="text-orange-500 text-xl mr-2"
+        >
           ⚠️
         </span>
-        {message || "Please fill out this field."}
+        {message || "This field is required."}
       </div>
     </div>
   );

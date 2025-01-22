@@ -1,41 +1,56 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import ContactInput from "./ContactInput";
 import ContactMessage from "./ContactMessage";
-//contains message components
-//handler for submitng
-//handler for checking if every value has been filled before submiting
-//email validation
-//empty value validation
+import { isValidEmail } from "../../utils";
+
+//TODO: handle form data submitting
 
 function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [buttonLabel, setButtonLabel] = useState("Send");
 
   const formHandler = () => {
-    console.log(name, email, message);
-    setName(""), setEmail(""), setMessage(""), setSubmitted(true);
+    // Validation Logic
+    if (!name || !email || !message) {
+      setSubmitted(true);
+      setButtonLabel("Please fill in all fields");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      setSubmitted(true);
+      setButtonLabel("Please enter a valid email");
+      return;
+    }
+
+    // Form Submission Logic
+    setName("");
+    setEmail("");
+    setMessage("");
+    setSubmitted(false);
+    setButtonLabel("Thank you");
+
+    //form data handling
+    console.log("Form submitted:", { name, email, message });
   };
 
   return (
     <div
       className="
-
       mt-6 tablet:mt-8 laptop:mt-10
       rounded-3xl
     h-96 tablet:h-[500px] laptop:h-[540px]
      w-[95%] tablet:w-full mx-auto
     relative
-    
   "
     >
       <div
         className="absolute bg-whitenoise inset-[1px] 
       rounded-3xl"
       ></div>
-      {/* CONTAINS OUR FORM */}
       <div
         className="relative w-full h-full bg-graydark bg-opacity-95 
         rounded-3xl
@@ -43,34 +58,39 @@ function ContactForm() {
         pb-9 tablet:pb-12
       "
       >
-        {/* NAME INPUT */}
+        {/* Name Input */}
         <div className="h-1/5">
           <ContactInput
             label="Name"
             placeholder="Your Name"
             inputState={name}
             setInputState={setName}
+            submitted={submitted}
             setSubmitted={setSubmitted}
           />
         </div>
-        {/* EMAIL INPUT */}
+        {/* Email Input */}
         <div className="h-1/5">
           <ContactInput
             label="Email"
             placeholder="Your Email"
             inputState={email}
             setInputState={setEmail}
-            setSubmitted={setSubmitted}
+            submitted={submitted}
+            validate
+            validationError={
+              !isValidEmail(email) ? "Invalid email address" : null
+            }
           />
         </div>
-        {/* MESSAGE INPUT */}
+        {/* Message Input */}
         <div className="h-2/5">
           <ContactMessage
             label="Message"
             placeholder="Message"
             inputState={message}
             setInputState={setMessage}
-            setSubmitted={setSubmitted}
+            submitted={submitted}
           />
         </div>
         <div className="w-[88%] mx-auto">
@@ -84,9 +104,9 @@ function ContactForm() {
             font-bold
             text-xs tablet:text-sm text-white
             hover:bg-opacity-90 duration-300"
-            onClick={() => formHandler()}
+            onClick={formHandler}
           >
-            {submitted ? "Thank you" : "Send"}
+            {buttonLabel}
           </button>
         </div>
       </div>

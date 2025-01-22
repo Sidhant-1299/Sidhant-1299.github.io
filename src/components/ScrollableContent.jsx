@@ -22,11 +22,6 @@ function ScrollableContent() {
       <Skills />
       <Academic />
       <Contact />
-      {[...Array(50)].map((_, i) => (
-        <h1 key={i} className="text-white text-center my-4 text-xl">
-          Hello World
-        </h1>
-      ))}
     </div>
   );
 }

@@ -10,6 +10,7 @@ function Contact() {
     <div
       id="contact"
       className="
+      h-[80vh]
       tablet:h-[85vh]
       laptop:pl-8
    mt-16 tablet:mt-20 laptop:mt-24

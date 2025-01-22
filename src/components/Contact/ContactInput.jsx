@@ -1,24 +1,29 @@
-import React from "react";
-import { useState } from "react";
+// export default ContactInput;
+
+import React, { useState } from "react";
+import Tooltip from "./Tooltip";
 
 function ContactInput({
   label,
   placeholder,
   inputState,
   setInputState,
+  submitted,
   setSubmitted,
+  validate,
+  validationError,
 }) {
-  //state to make the border when input is selected
   const [isFocused, setIsFocused] = useState(false);
+
   return (
-    <div className="h-full w-[88%] mx-auto ">
-      {/* label */}
+    <div className="h-full w-[88%] mx-auto relative">
+      {/* Label */}
       <div className="h-1/3 w-full">
         <h1
           className="
         text-graylight 
         text-sm tablet:text-base
-        px-5 tablet:px-6
+        px-4 tablet:px-6
         tablet:pt-1
         leading-2
         "
@@ -26,16 +31,11 @@ function ContactInput({
           {label}
         </h1>
       </div>
-      {/* INPUT AREA */}
-      <div
-        className=" w-full relative group
-      h-8 tablet:h-11 laptop:h-12
-      "
-      >
-        {/* GLOWS WHEN INPUT IS SELECTED */}
+      {/* Input Area */}
+      <div className="w-full relative group h-9 tablet:h-11 laptop:h-12">
         <div
           className={`absolute -inset-[1px] 
-        bg-custom-gradient rounded-xl 
+          bg-custom-gradient rounded-xl 
           ${isFocused ? "visible" : "invisible"}`}
         ></div>
         <input
@@ -54,7 +54,20 @@ function ContactInput({
           }}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
-        ></input>
+        />
+        {/* Tooltip for Validation Errors */}
+        {submitted && (!inputState || (validate && validationError)) && (
+          <Tooltip
+            message={
+              !inputState
+                ? `${label} is required`
+                : validationError
+                ? validationError
+                : "Invalid value"
+            }
+            position="bottom"
+          />
+        )}
       </div>
     </div>
   );
