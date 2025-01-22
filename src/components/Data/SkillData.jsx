@@ -47,14 +47,14 @@ export const skills = [
   { icon: neo4j, name: "Neo4j", homepage: "https://neo4j.com/" },
   {
     icon: Oracle,
-    name: "Oracle",
+    name: "Oracle SQL",
     homepage: "https://www.oracle.com/ca-en/database/sqldeveloper/",
   },
-  {
-    icon: TensorFlow,
-    name: "TensorFlow",
-    homepage: "https://www.tensorflow.org/",
-  },
+  // {
+  //   icon: TensorFlow,
+  //   name: "TensorFlow",
+  //   homepage: "https://www.tensorflow.org/",
+  // },
   { icon: PyTorch, name: "PyTorch", homepage: "https://pytorch.org/" },
   { icon: Keras, name: "Keras", homepage: "https://keras.io/" },
   { icon: react, name: "React", homepage: "https://reactjs.org/" },

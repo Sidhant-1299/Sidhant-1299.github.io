@@ -12,7 +12,7 @@ function ProfileCard() {
       className=" laptop:fixed
       bg-whitenoise rounded-3xl
       mx-auto
-      h-[480px] w-[90%] 
+      h-[490px] w-[90%] 
       tablet:h-[500px] tablet:w-[80%]
       laptop:h-[560px] laptop:w-[340px]
     desktop:h-[600px] desktop:w-[400px] 

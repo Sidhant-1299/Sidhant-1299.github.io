@@ -1,6 +1,5 @@
 import React from "react";
 import { openInNewTab } from "../../utils";
-import { header } from "../Data/SkillData";
 
 function SkillCard({ icon, url, name }) {
   return (
@@ -8,18 +7,26 @@ function SkillCard({ icon, url, name }) {
       onClick={() => openInNewTab(url)}
       className="
 
-      laptop:h-24 laptop:w-[90%] 
+      laptop:h-24 laptop:w-[90%]
       desktop:w-[360px]
       hover:scale-105 duration-300 cursor-pointer
-      flex 
+      flex
       items-center justify-self-center
       laptop:items-start laptop:justify-start
       rounded-xl bg-graydark
-      ml-2 group
+      ml-2
+      relative
+      group
       "
     >
       <div
         className="
+      hidden laptop:inline rounded-xl
+      bg-whitenoise absolute inset-0 opacity-5"
+      ></div>
+      <div
+        className="
+        relative
       bg-white
       h-16 w-16
       tablet:h-[72px] tablet:w-[72px]
@@ -36,14 +43,21 @@ function SkillCard({ icon, url, name }) {
           className="
           h-14 w-14
       tablet:h-16 tablet:w-16
-      my-auto 
+      my-auto
       "
         ></img>
       </div>
+      {/* DISAPPEARS FOR TOUCH SCREENS */}
       <div className="h-full hidden laptop:block">
+        {/* NAME */}
+        {/* group-hover:bg-clip-text group-hover:text-transparent
+         group-hover:bg-custom-gradient */}
         <h1
-          className="text-white font-bold my-auto
-        laptop:py-10 laptop:pl-12 group-hover:text-orange-400
+          className="text-graylight font-bold my-auto
+          laptop:text-lg
+        laptop:py-10 laptop:pl-12
+        group-hover:text-orange-400
+
         "
         >
           {name}

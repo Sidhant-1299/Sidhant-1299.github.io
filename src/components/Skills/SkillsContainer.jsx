@@ -11,7 +11,7 @@ function SkillsContainer() {
       w-[80%] 
       tablet:w-[90%]
       laptop:w-full 
-      mx-auto
+      mx-auto laptop:ml-4
       mt-12
       tablet:mt-14
       laptop:mt-16 laptop:mb-16
@@ -19,9 +19,8 @@ function SkillsContainer() {
       grid gap-y-4
     grid-cols-3 tablet:grid-cols-4
      laptop:grid-cols-2 desktop:grid-cols-
-      
         rounded-xl
-
+       
      "
     >
       {skills.map((skill, index) => (
