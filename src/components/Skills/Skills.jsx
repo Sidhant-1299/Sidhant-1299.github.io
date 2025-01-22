@@ -24,7 +24,7 @@ function Skills() {
      tablet:pb-24
      ${
        hasAnimated ? "translate-y-2 opacity-100" : "-translate-y-2 opacity-0"
-     } duration-700`}
+     } duration-500`}
     >
       <div className="w-[90%] laptop:w-[95%] mx-auto">
         <PageHeader header={header} />

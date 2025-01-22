@@ -3,7 +3,7 @@ import React from "react";
 function Tooltip({ message, position = "top" }) {
   return (
     <div
-      className={`absolute z-10 flex items-center px-4 py-1 tablet:py-2 bg-white border border-gray-300 rounded-lg shadow-md text-gray-800 text-sm ${
+      className={`absolute z-10 flex items-center px-4 py-1 tablet:py-1 bg-white border border-gray-300 rounded-lg shadow-md text-gray-800 text-sm ${
         position === "top"
           ? "bottom-full right-0 mb-2"
           : "top-full right-0 mt-1"

@@ -12,6 +12,8 @@ function ContactInput({
   setSubmitted,
   validate,
   validationError,
+  buttonLabel,
+  setButtonLabel,
 }) {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -51,6 +53,9 @@ function ContactInput({
           onChange={(e) => {
             setInputState(e.target.value);
             setSubmitted(false);
+            if (buttonLabel == "Thank you") {
+              setButtonLabel("Send");
+            }
           }}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}

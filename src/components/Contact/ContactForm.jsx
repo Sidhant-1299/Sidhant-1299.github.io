@@ -42,7 +42,7 @@ function ContactForm() {
       className="
       mt-6 tablet:mt-8 laptop:mt-10
       rounded-3xl
-    h-96 tablet:h-[500px] laptop:h-[540px]
+    h-96 tablet:h-[500px] laptop:h-[540px] desktop:h-[540px]
      w-[95%] tablet:w-full mx-auto
     relative
   "
@@ -67,6 +67,8 @@ function ContactForm() {
             setInputState={setName}
             submitted={submitted}
             setSubmitted={setSubmitted}
+            buttonLabel={buttonLabel}
+            setButtonLabel={setButtonLabel}
           />
         </div>
         {/* Email Input */}
@@ -77,6 +79,9 @@ function ContactForm() {
             inputState={email}
             setInputState={setEmail}
             submitted={submitted}
+            setSubmitted={setSubmitted}
+            buttonLabel={buttonLabel}
+            setButtonLabel={setButtonLabel}
             validate
             validationError={
               !isValidEmail(email) ? "Invalid email address" : null
@@ -91,6 +96,8 @@ function ContactForm() {
             inputState={message}
             setInputState={setMessage}
             submitted={submitted}
+            buttonLabel={buttonLabel}
+            setButtonLabel={setButtonLabel}
           />
         </div>
         <div className="w-[88%] mx-auto">
@@ -103,7 +110,7 @@ function ContactForm() {
             w-full
             font-bold
             text-sm tablet:text-base text-white
-            hover:bg-opacity-90 duration-300"
+             "
             onClick={formHandler}
           >
             {buttonLabel}

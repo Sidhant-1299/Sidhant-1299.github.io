@@ -16,7 +16,10 @@ function ScrollableContent() {
     laptop:pl-8
     
     w-full tablet:w-[90%] laptop:w-full
-    mx-auto laptop:mx-0"
+    mx-auto laptop:mx-0
+    
+  
+    "
     >
       <Home />
       <Projects />

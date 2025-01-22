@@ -21,7 +21,7 @@ function Academic() {
         w-[90%] laptop:w-[95%] mx-auto
         ${
           hasAnimated ? "translate-y-2 opacity-100" : "-translate-y-2 opacity-0"
-        } duration-700`}
+        } duration-500`}
     >
       <PageHeader header={header} />
       <AcademicContainer />

@@ -22,7 +22,7 @@ function Home() {
       laptop:pl-8
      pb-8 ${
        hasAnimated ? "translate-y-2 opacity-100" : "-translate-y-2 opacity-0"
-     } duration-700`}
+     } duration-500`}
     >
       <PageHeader header={header} />
       {/* INTRODUCTION */}

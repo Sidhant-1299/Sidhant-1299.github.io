@@ -26,7 +26,7 @@ function ProfileCard() {
       laptop:h-[560px] laptop:w-[340px]
     desktop:h-[600px] desktop:w-[400px]
     ${hasAnimated ? "translate-y-2 opacity-100" : "-translate-y-2 opacity-0"}
-    duration-700
+    duration-500
     `}
     >
       <div
