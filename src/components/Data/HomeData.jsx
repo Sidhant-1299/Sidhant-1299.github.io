@@ -6,5 +6,5 @@ export const introduction =
       and drive meaningful change";
 
 export const githubURL = "https://github.com/Sidhant-1299/";
-//TODO: change resume data
-export const resumeURL = "https://youtube.com";
+export const resumeURL =
+  "https://docs.google.com/document/d/1fqO7Bz8Lt9trG2gnx5r9Z51ZJCENFCqUPhajD6nqBbo/edit?usp=sharing";
