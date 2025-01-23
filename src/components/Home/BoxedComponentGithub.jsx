@@ -33,11 +33,11 @@ function BoxedComponentGithub() {
           GITHUB
         </h1>
         <div
-          className="laptop:group-hover:translate-x-6
+          className="laptop:group-hover:translate-x-4
            duration-300
         absolute 
         laptop:bottom-6 laptop:right-10
-        bottom-0 right-3
+        bottom-2 right-2
         tablet:bottom-2 tablet:right-3
         "
         >

@@ -1,4 +1,3 @@
-//TODO: add scroll offset for navbar
 export const scrollIntoViewWithID = (id) => {
   const element = document.getElementById(id);
   element.scrollIntoView({ behavior: "smooth", block: "start" });

@@ -17,7 +17,7 @@ export const MyProjects = [
     id: 2,
     url: "https://github.com/Sidhant-1299/Classification-with-ML",
     img: classification_tiktok,
-    header: "Random Forest",
+    header: "Classification with ML",
     description: "Classifying videos using Random Forest",
   },
   {

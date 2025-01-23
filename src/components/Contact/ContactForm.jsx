@@ -3,14 +3,17 @@ import ContactInput from "./ContactInput";
 import ContactMessage from "./ContactMessage";
 import { isValidEmail } from "../../utils";
 
-//TODO: handle form data submitting
-
 function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [buttonLabel, setButtonLabel] = useState("Send");
+
+  //TODO: handle form data submitting
+  const formDataHandling = (name, email, message) => {
+    console.log("Form submitted:", { name, email, message });
+  };
 
   const formHandler = () => {
     // Validation Logic
@@ -33,8 +36,8 @@ function ContactForm() {
     setSubmitted(false);
     setButtonLabel("Thank you");
 
-    //form data handling
-    console.log("Form submitted:", { name, email, message });
+    //TODO: form data handling
+    formDataHandling(name, email, message);
   };
 
   return (
@@ -109,6 +112,7 @@ function ContactForm() {
             bg-custom-gradient
             w-full
             font-bold
+            
             text-sm tablet:text-base text-white
              "
             onClick={formHandler}

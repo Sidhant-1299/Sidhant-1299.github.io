@@ -26,7 +26,7 @@ function ProjectCard({ img, header, description, url }) {
         ></img>
       </div>
       {/* HEADER AND DESCRITPION */}
-      <div className="h-1/3 w-full bg-whitenoise rounded-b-[20px]">
+      <div className="h-1/3 w-full bg-whitenoise rounded-b-[17px]">
         <div className="w-full h-full bg-graydark bg-opacity-90 rounded-b-2xl">
           {/* HEADER */}
           <div
