@@ -40,7 +40,6 @@ function SkillCard({ icon, url, name }) {
         <img
           src={icon}
           alt={name}
-          loading="lazy"
           className="
           h-14 w-14
       tablet:h-16 tablet:w-16
