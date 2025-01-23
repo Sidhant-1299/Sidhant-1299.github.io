@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ContactInput from "./ContactInput";
 import ContactMessage from "./ContactMessage";
 import { isValidEmail } from "../../utils";
-import formDataHandling from "./DataHandling";
+import { formDataHandling, formHandlingDevelopment } from "./DataHandling";
 import {
   invalidEmailErrMsg,
   fillAllErrMsg,
@@ -40,8 +40,9 @@ function ContactForm() {
     setSubmitted(false);
     setButtonLabel(thanksMsg);
 
-    //form data handling
-    formDataHandling(name, email, message, setButtonLabel);
+    //form data handling for production
+    // formDataHandling(name, email, message, setButtonLabel);
+    formHandlingDevelopment(name, email, message);
   };
 
   return (

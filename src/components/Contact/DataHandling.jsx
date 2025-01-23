@@ -1,7 +1,7 @@
 import { serverURL } from "../../utils";
 import { errorResponseMsg } from "./ButtonLabels";
 
-const formDataHandling = (name, email, message, setButtonLabel) => {
+export const formDataHandling = (name, email, message, setButtonLabel) => {
   const data = JSON.stringify({ name, email, message });
   const path = "contact";
   const request = new Request(`${serverURL}${path}`, {
@@ -27,4 +27,6 @@ const formDataHandling = (name, email, message, setButtonLabel) => {
     });
 };
 
-export default formDataHandling;
+export const formHandlingDevelopment = (name, email, message) => {
+  console.log({ name, email, message });
+};
