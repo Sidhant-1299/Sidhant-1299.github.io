@@ -16,8 +16,8 @@ package-lock.json
 postcss.config.js
 vite.config.js
 README.md
-src/assets/
 public/
+
 
 # Editor directories and files
 .vscode/*
