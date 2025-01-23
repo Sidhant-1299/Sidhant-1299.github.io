@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Tooltip from "./Tooltip";
-
+import { thanksMsg, sendMsg, errorResponseMsg } from "./ButtonLabels";
 function ContactMessage({
   label,
   placeholder,
@@ -50,8 +50,8 @@ function ContactMessage({
           onBlur={() => setIsFocused(!isFocused)}
           onChange={(e) => {
             setInputState(e.target.value);
-            if (buttonLabel == "Thank you") {
-              setButtonLabel("Send");
+            if (buttonLabel == thanksMsg || buttonLabel == errorResponseMsg) {
+              setButtonLabel(sendMsg);
             }
           }}
           value={inputState}

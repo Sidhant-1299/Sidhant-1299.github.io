@@ -2,30 +2,34 @@ import React, { useState } from "react";
 import ContactInput from "./ContactInput";
 import ContactMessage from "./ContactMessage";
 import { isValidEmail } from "../../utils";
+import formDataHandling from "./DataHandling";
+import {
+  invalidEmailErrMsg,
+  fillAllErrMsg,
+  thanksMsg,
+  sendMsg,
+} from "./ButtonLabels";
 
 function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const [buttonLabel, setButtonLabel] = useState("Send");
+  const [buttonLabel, setButtonLabel] = useState(sendMsg);
 
   //TODO: handle form data submitting
-  const formDataHandling = (name, email, message) => {
-    console.log("Form submitted:", { name, email, message });
-  };
 
   const formHandler = () => {
     // Validation Logic
     if (!name || !email || !message) {
       setSubmitted(true);
-      setButtonLabel("Please fill in all fields");
+      setButtonLabel(invalidEmailErrMsg);
       return;
     }
 
     if (!isValidEmail(email)) {
       setSubmitted(true);
-      setButtonLabel("Please enter a valid email");
+      setButtonLabel(fillAllErrMsg);
       return;
     }
 
@@ -34,10 +38,10 @@ function ContactForm() {
     setEmail("");
     setMessage("");
     setSubmitted(false);
-    setButtonLabel("Thank you");
+    setButtonLabel(thanksMsg);
 
-    //TODO: form data handling
-    formDataHandling(name, email, message);
+    //form data handling
+    formDataHandling(name, email, message, setButtonLabel);
   };
 
   return (

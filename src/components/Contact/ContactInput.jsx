@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Tooltip from "./Tooltip";
+import { thanksMsg, sendMsg, errorResponseMsg } from "./ButtonLabels";
 
 function ContactInput({
   label,
@@ -53,8 +54,8 @@ function ContactInput({
           onChange={(e) => {
             setInputState(e.target.value);
             setSubmitted(false);
-            if (buttonLabel == "Thank you") {
-              setButtonLabel("Send");
+            if (buttonLabel == thanksMsg || buttonLabel == errorResponseMsg) {
+              setButtonLabel(sendMsg);
             }
           }}
           onFocus={() => setIsFocused(true)}

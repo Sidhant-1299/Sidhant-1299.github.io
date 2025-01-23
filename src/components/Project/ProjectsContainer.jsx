@@ -23,17 +23,6 @@ function ProjectsContainer() {
           />
         );
       })}
-      {MyProjects.map((project) => {
-        return (
-          <ProjectCard
-            img={project.img}
-            header={project.header}
-            description={project.description}
-            url={project.url}
-            key={project.id}
-          />
-        );
-      })}
     </div>
   );
 }

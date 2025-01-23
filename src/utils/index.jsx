@@ -1,3 +1,6 @@
+import { protocol, hostname, port } from "../Config/";
+
+export const serverURL = `${protocol}://${hostname}:${port}/`;
 export const scrollIntoViewWithID = (id) => {
   const element = document.getElementById(id);
   element.scrollIntoView({ behavior: "smooth", block: "start" });
