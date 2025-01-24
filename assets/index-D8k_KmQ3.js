@@ -76,9 +76,11 @@ Error generating stack: `+i.message+`
             laptop:my-auto desktop:my-0`,children:[m.jsx(Uo,{icon:m.jsx(md,{}),link:Cd}),m.jsx(Uo,{icon:m.jsx(yd,{}),link:`mailto:${Sd}`}),m.jsx(Uo,{icon:m.jsx(hd,{}),link:Ed})]})]})]})]})})}function Nr({header:f}){const a=f.toUpperCase().split(" ");let E="",z="";return a.length>2?(z=a.slice(-1)[0],E=a.slice(0,-1).join(" ")):a.length===2?(E=a[0],z=a[1]):a.length===1&&(E=a[0],z=""),m.jsxs("div",{className:"text-center laptop:text-start",children:[m.jsx("h1",{className:"text-[56px] tablet:text-[96px] leading-none text-white font-bold",children:E}),z&&m.jsx("h1",{className:"text-[56px] tablet:text-[96px] leading-none text-gray font-bold",children:z})]})}const jd="Data analyst",_d="I'm a Data Science and Analytics student  Passionate about leveraging data and to apply technical expertise and creativity to solve real-world problems      and drive meaningful change",Pd="https://github.com/Sidhant-1299/",zd="https://docs.google.com/document/d/1fqO7Bz8Lt9trG2gnx5r9Z51ZJCENFCqUPhajD6nqBbo/edit?usp=sharing";function Ld(f){return at({tag:"svg",attr:{viewBox:"0 0 256 256",fill:"currentColor"},child:[{tag:"path",attr:{d:"M210.09,43.19l-130.25-23a12,12,0,0,0-13.91,9.73l-29.75,169a12,12,0,0,0,9.73,13.9l130.26,23a11.58,11.58,0,0,0,2.11.19,12,12,0,0,0,11.79-9.92l29.75-169A12,12,0,0,0,210.09,43.19Zm1.85,12.51-29.75,169a4,4,0,0,1-4.63,3.25l-130.26-23a4,4,0,0,1-3.24-4.63l29.75-169a4,4,0,0,1,4.63-3.25l130.26,23A4,4,0,0,1,211.94,55.7Zm-27.8,19.47a4,4,0,0,1-3.93,3.3,4.14,4.14,0,0,1-.7-.06l-83-14.66a4,4,0,1,1,1.39-7.88l83,14.66A4,4,0,0,1,184.14,75.17Zm-5.54,31.51a4,4,0,0,1-3.94,3.31,3.39,3.39,0,0,1-.7-.07L91,95.27a4,4,0,1,1,1.39-7.88l83,14.66A4,4,0,0,1,178.6,106.68Zm-47,24.19a4,4,0,0,1-3.94,3.3,4.23,4.23,0,0,1-.7-.06l-41.49-7.33a4,4,0,1,1,1.39-7.87l41.49,7.32A4,4,0,0,1,131.56,130.87Z"},child:[]}]})(f)}function Rd(){return m.jsxs("div",{className:`
     h-48 tablet:h-56 laptop:h-64 
     w-[37%] tablet:w-[40%] laptop:w-[40%] 
-    relative group hover:scale-105 duration-300`,onClick:()=>In(zd),children:[m.jsx("div",{className:`absolute inset-0 blur-md opacity-60 
-      group-hover:opacity-100 bg-custom-gradient
-      duration-300 `}),m.jsxs("div",{className:`relative h-full w-full
+    relative group hover:scale-105 duration-300`,onClick:()=>In(zd),children:[m.jsx("div",{className:`absolute inset-0 blur-md 
+        opacity-90 animate-pulse laptop:animate-none
+        laptop:opacity-60 
+      laptop:group-hover:opacity-100 bg-custom-gradient
+      duration-300  `}),m.jsxs("div",{className:`relative h-full w-full
            text-white bg-black 
     rounded-xl
    duration-300
