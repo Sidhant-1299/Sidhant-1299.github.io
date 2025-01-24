@@ -15,9 +15,11 @@ function BoxedComponentCV() {
       onClick={() => openInNewTab(resumeURL)}
     >
       <div
-        className="absolute inset-0 blur-md opacity-60 
-      group-hover:opacity-100 bg-custom-gradient
-      duration-300 "
+        className="absolute inset-0 blur-md 
+        opacity-90 animate-pulse laptop:animate-none
+        laptop:opacity-60 
+      laptop:group-hover:opacity-100 bg-custom-gradient
+      duration-300  "
       ></div>
       <div
         className={`relative h-full w-full
