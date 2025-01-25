@@ -77,7 +77,7 @@ Error generating stack: `+i.message+`
     h-48 tablet:h-56 laptop:h-64 
     w-[37%] tablet:w-[40%] laptop:w-[40%] 
     relative group hover:scale-105 duration-300`,onClick:()=>In(zd),children:[m.jsx("div",{className:`absolute inset-0 blur-md 
-        opacity-90 animate-pulse laptop:animate-none
+        opacity-100 animate-pulse laptop:animate-none
         laptop:opacity-60 
       laptop:group-hover:opacity-100 bg-custom-gradient
       duration-300  `}),m.jsxs("div",{className:`relative h-full w-full
@@ -138,13 +138,14 @@ Error generating stack: `+i.message+`
           h-1/2 
           w-[90%] mx-auto
           flex
-          group-hover:bg-clip-text group-hover:text-transparent
-         group-hover:bg-custom-gradient 
-          text-white items-center justify-center`,children:m.jsx("h1",{className:`
+           items-center justify-center`,children:m.jsx("h1",{className:`
               text-lg tablet:text-xl laptop:text-lg desktop:text-xl  
               leading-6 laptop:leading-5
               font-bold text-center
                pt-1 tablet:pt-2 desktop:pt-4 
+               group-hover:bg-clip-text group-hover:text-transparent
+         group-hover:bg-custom-gradient 
+          text-white
             `,children:v})}),m.jsx("div",{className:`h-2/5 laptop:h-1/2 desktop:h-2/5
             w-[90%] mx-auto
           `,children:m.jsx("h1",{className:`text-graylight text-xs desktop:text-sm 
@@ -311,8 +312,10 @@ Error generating stack: `+i.message+`
             bg-custom-gradient
             w-full
             font-bold
-            
+            hover:bg-custom-gradient-with-opacity
+            duration-300
             text-sm tablet:text-base text-white
+
              `,onClick:de,children:I})})]})]})}function Rp(){const{ref:f,isVisible:v}=Fn(),[a,E]=ge.useState(!1);return v&&!a&&E(!0),m.jsxs("div",{id:"contact",ref:f,className:`
         min-h-[80vh] 
         laptop:h-full
