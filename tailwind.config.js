@@ -43,6 +43,8 @@ export default {
         whitenoise: "url('/src/assets/whitenoise.png')",
         "custom-gradient":
           "linear-gradient(to right, #fbbf24, #fb923c, #ef4444)",
+        "custom-gradient-with-opacity":
+          "linear-gradient(to right, rgba(251, 191, 36, 0.85), rgba(251, 146, 60, 0.85), rgba(239, 68, 68, 0.85))",
       },
       keyframes: {
         wiggle: {

@@ -117,8 +117,10 @@ function ContactForm() {
             bg-custom-gradient
             w-full
             font-bold
-            
+            hover:bg-custom-gradient-with-opacity
+            duration-300
             text-sm tablet:text-base text-white
+
              "
             onClick={formHandler}
           >
