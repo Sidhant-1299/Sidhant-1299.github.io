@@ -16,7 +16,7 @@ function BoxedComponentCV() {
     >
       <div
         className="absolute inset-0 blur-md 
-        opacity-90 animate-pulse laptop:animate-none
+        opacity-100 animate-pulse laptop:animate-none
         laptop:opacity-60 
       laptop:group-hover:opacity-100 bg-custom-gradient
       duration-300  "
