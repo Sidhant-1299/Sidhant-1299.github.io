@@ -124,7 +124,7 @@ Error generating stack: `+i.message+`
        laptop:ml-1
        items-center justify-center
        laptop:justify-start
-      mx-auto laptop:mx-0`,children:[m.jsx(Rd,{}),m.jsx(Md,{})]})]})}const Id=""+new URL("classification_tiktok-CAEaqTz-.png",import.meta.url).href,Fd=""+new URL("penguins-BQfTzyYD.png",import.meta.url).href,Ud=""+new URL("probability-OnzLn9FE.png",import.meta.url).href,Ad="Recent projects",Bd=[{id:1,url:"https://github.com/Sidhant-1299/LinearRegressionWithPenguins",img:Fd,header:"Linear Regression with Penguins",description:"Using Linear regression to find relationship between features of Penguins dataset"},{id:2,url:"https://github.com/Sidhant-1299/Classification-with-ML",img:Id,header:"Classification with ML",description:"Classifying videos using Random Forest"},{id:3,url:"https://github.com/Sidhant-1299/CoinToss",img:Ud,header:"Coin Toss",description:"Simulating a million coin toss to determine if it has a normal distribution"}];function Vd({img:f,header:v,description:a,url:E}){return m.jsxs("div",{className:`
+      mx-auto laptop:mx-0`,children:[m.jsx(Rd,{}),m.jsx(Md,{})]})]})}const Id=""+new URL("classification_tiktok-CAEaqTz-.png",import.meta.url).href,Fd=""+new URL("penguins-BQfTzyYD.png",import.meta.url).href,Ud=""+new URL("probability-OnzLn9FE.png",import.meta.url).href,Ad=""+new URL("KMeans_Visualizer-DDijWrO2.jpg",import.meta.url).href,Bd="Recent projects",Vd=[{id:1,url:"https://github.com/Sidhant-1299/LinearRegressionWithPenguins",img:Fd,header:"Linear Regression with Penguins",description:"Using Linear regression to find relationship between features of Penguins dataset"},{id:2,url:"https://github.com/Sidhant-1299/Classification-with-ML",img:Id,header:"Classification with ML",description:"Classifying videos using Random Forest"},{id:3,url:"https://github.com/Sidhant-1299/Kmeans_interactive_visualizer",img:Ad,header:"Interactive Kmeans algorithm visualizer",description:"Using python to make an interactive interface for learning KMeans algorithm"},{id:4,url:"https://github.com/Sidhant-1299/CoinToss",img:Ud,header:"Coin Toss",description:"Simulating a million coin toss to determine if it has a normal distribution"}];function Hd({img:f,header:v,description:a,url:E}){return m.jsxs("div",{className:`
       col-span-1 row-span-1
        h-72 tablet:h-96 laptop:h-[340px] desktop:h-96
        w-[90%] tablet:w-full 
@@ -152,16 +152,16 @@ Error generating stack: `+i.message+`
           text-center
             pt-1
             laptop:pb-2
-          desktop:pb-4 `,children:a})})]})})]})}function Hd(){return m.jsx("div",{className:`w-full h-full pt-10
+          desktop:pb-4 `,children:a})})]})})]})}function $d(){return m.jsx("div",{className:`w-full h-full pt-10
   grid grid-cols-1 tablet:grid-cols-2 
   gap-x-6 
   gap-y-8 tablet:gap-y-6
   
-  `,children:Bd.map(f=>m.jsx(Vd,{img:f.img,header:f.header,description:f.description,url:f.url},f.id))})}function $d(){const{ref:f,isVisible:v}=Fn(),[a,E]=ge.useState(!1);return v&&!a&&E(!0),m.jsxs("div",{id:"projects",ref:f,className:`laptop:pl-4
+  `,children:Vd.map(f=>m.jsx(Hd,{img:f.img,header:f.header,description:f.description,url:f.url},f.id))})}function Wd(){const{ref:f,isVisible:v}=Fn(),[a,E]=ge.useState(!1);return v&&!a&&E(!0),m.jsxs("div",{id:"projects",ref:f,className:`laptop:pl-4
      mt-16 tablet:mt-20 laptop:mt-24
      tablet:pt-8 laptop:pt-0
      w-[90%] laptop:w-[95%] mx-auto
-     ${a?"translate-y-2 opacity-100":"-translate-y-2 opacity-0"} duration-500`,children:[m.jsx(Nr,{header:Ad}),m.jsx(Hd,{})]})}const Wd=""+new URL("tableau-Ck2eRE_9.png",import.meta.url).href,Qd=""+new URL("Git-DEM3wzRi.png",import.meta.url).href,Kd=""+new URL("python-CohBfVyI.png",import.meta.url).href,Yd=""+new URL("tailwind-Biu2-V6X.png",import.meta.url).href,Xd=""+new URL("pandas-BBD8Ntz9.png",import.meta.url).href,Gd=""+new URL("Oracle-B6zq3R4l.png",import.meta.url).href,Zd=""+new URL("matlplotlib-_CIsYLQj.png",import.meta.url).href,Jd=""+new URL("jupyter-DJRBT0Zk.png",import.meta.url).href,qd=""+new URL("Keras-BGHvb01Y.png",import.meta.url).href,bd=""+new URL("linux-DNNa098C.png",import.meta.url).href,ep=""+new URL("JavaScript-DJTE1fL7.png",import.meta.url).href,tp=""+new URL("numpy-Drrtn4Fg.png",import.meta.url).href,np=""+new URL("neo4j-B6mvZ9XE.png",import.meta.url).href,rp=""+new URL("cassandra-ClXBDJAz.png",import.meta.url).href,lp=""+new URL("excel-bbFl-oOR.png",import.meta.url).href,ip=""+new URL("MySQL-D2b_KIHY.png",import.meta.url).href,op=""+new URL("scikit-learn-DdSrlLlp.png",import.meta.url).href,up=""+new URL("react-DbavuWM8.png",import.meta.url).href,sp=""+new URL("PostgresSQL-IlMO64UL.png",import.meta.url).href,ap=""+new URL("PyTorch-BDIkD0Xx.png",import.meta.url).href,cp=""+new URL("MongoDB-CzrTCLas.png",import.meta.url).href,fp=""+new URL("R-DQHP_BPI.png",import.meta.url).href,dp="Skill Highlights",pp=[{icon:Kd,name:"Python",homepage:"https://www.python.org/"},{icon:ep,name:"JavaScript",homepage:"https://developer.mozilla.org/en-US/docs/Web/JavaScript"},{icon:fp,name:"R",homepage:"https://www.r-project.org/"},{icon:ip,name:"MySQL",homepage:"https://www.mysql.com/"},{icon:sp,name:"PostgreSQL",homepage:"https://www.postgresql.org/"},{icon:cp,name:"MongoDB",homepage:"https://www.mongodb.com/"},{icon:rp,name:"Cassandra",homepage:"https://cassandra.apache.org/"},{icon:np,name:"Neo4j",homepage:"https://neo4j.com/"},{icon:Gd,name:"Oracle SQL",homepage:"https://www.oracle.com/ca-en/database/sqldeveloper/"},{icon:ap,name:"PyTorch",homepage:"https://pytorch.org/"},{icon:qd,name:"Keras",homepage:"https://keras.io/"},{icon:up,name:"React",homepage:"https://reactjs.org/"},{icon:Yd,name:"Tailwind CSS",homepage:"https://tailwindcss.com/"},{icon:Xd,name:"Pandas",homepage:"https://pandas.pydata.org/"},{icon:tp,name:"NumPy",homepage:"https://numpy.org/"},{icon:Zd,name:"Matplotlib",homepage:"https://matplotlib.org/"},{icon:Qd,name:"Git",homepage:"https://git-scm.com/"},{icon:bd,name:"Linux",homepage:"https://www.linux.org/"},{icon:lp,name:"Excel",homepage:"https://www.microsoft.com/en-us/microsoft-365/excel"},{icon:Jd,name:"Jupyter notebook",homepage:"https://jupyter.org/"},{icon:Wd,name:"Tableau",homepage:"https://www.tableau.com/"},{icon:op,name:"Scikit learn",homepage:"https://scikit-learn.org/stable/"}];function mp({icon:f,url:v,name:a}){return m.jsxs("div",{onClick:()=>In(v),className:`
+     ${a?"translate-y-2 opacity-100":"-translate-y-2 opacity-0"} duration-500`,children:[m.jsx(Nr,{header:Bd}),m.jsx($d,{})]})}const Qd=""+new URL("tableau-Ck2eRE_9.png",import.meta.url).href,Kd=""+new URL("Git-DEM3wzRi.png",import.meta.url).href,Yd=""+new URL("python-CohBfVyI.png",import.meta.url).href,Xd=""+new URL("tailwind-Biu2-V6X.png",import.meta.url).href,Gd=""+new URL("pandas-BBD8Ntz9.png",import.meta.url).href,Zd=""+new URL("Oracle-B6zq3R4l.png",import.meta.url).href,Jd=""+new URL("matlplotlib-_CIsYLQj.png",import.meta.url).href,qd=""+new URL("jupyter-DJRBT0Zk.png",import.meta.url).href,bd=""+new URL("Keras-BGHvb01Y.png",import.meta.url).href,ep=""+new URL("linux-DNNa098C.png",import.meta.url).href,tp=""+new URL("JavaScript-DJTE1fL7.png",import.meta.url).href,np=""+new URL("numpy-Drrtn4Fg.png",import.meta.url).href,rp=""+new URL("neo4j-B6mvZ9XE.png",import.meta.url).href,lp=""+new URL("cassandra-ClXBDJAz.png",import.meta.url).href,ip=""+new URL("excel-bbFl-oOR.png",import.meta.url).href,op=""+new URL("MySQL-D2b_KIHY.png",import.meta.url).href,up=""+new URL("scikit-learn-DdSrlLlp.png",import.meta.url).href,sp=""+new URL("react-DbavuWM8.png",import.meta.url).href,ap=""+new URL("PostgresSQL-IlMO64UL.png",import.meta.url).href,cp=""+new URL("PyTorch-BDIkD0Xx.png",import.meta.url).href,fp=""+new URL("MongoDB-CzrTCLas.png",import.meta.url).href,dp=""+new URL("R-DQHP_BPI.png",import.meta.url).href,pp="Skill Highlights",mp=[{icon:Yd,name:"Python",homepage:"https://www.python.org/"},{icon:tp,name:"JavaScript",homepage:"https://developer.mozilla.org/en-US/docs/Web/JavaScript"},{icon:dp,name:"R",homepage:"https://www.r-project.org/"},{icon:op,name:"MySQL",homepage:"https://www.mysql.com/"},{icon:ap,name:"PostgreSQL",homepage:"https://www.postgresql.org/"},{icon:fp,name:"MongoDB",homepage:"https://www.mongodb.com/"},{icon:lp,name:"Cassandra",homepage:"https://cassandra.apache.org/"},{icon:rp,name:"Neo4j",homepage:"https://neo4j.com/"},{icon:Zd,name:"Oracle SQL",homepage:"https://www.oracle.com/ca-en/database/sqldeveloper/"},{icon:cp,name:"PyTorch",homepage:"https://pytorch.org/"},{icon:bd,name:"Keras",homepage:"https://keras.io/"},{icon:sp,name:"React",homepage:"https://reactjs.org/"},{icon:Xd,name:"Tailwind CSS",homepage:"https://tailwindcss.com/"},{icon:Gd,name:"Pandas",homepage:"https://pandas.pydata.org/"},{icon:np,name:"NumPy",homepage:"https://numpy.org/"},{icon:Jd,name:"Matplotlib",homepage:"https://matplotlib.org/"},{icon:Kd,name:"Git",homepage:"https://git-scm.com/"},{icon:ep,name:"Linux",homepage:"https://www.linux.org/"},{icon:ip,name:"Excel",homepage:"https://www.microsoft.com/en-us/microsoft-365/excel"},{icon:qd,name:"Jupyter notebook",homepage:"https://jupyter.org/"},{icon:Qd,name:"Tableau",homepage:"https://www.tableau.com/"},{icon:up,name:"Scikit learn",homepage:"https://scikit-learn.org/stable/"}];function hp({icon:f,url:v,name:a}){return m.jsxs("div",{onClick:()=>In(v),className:`
 
       laptop:h-24 laptop:w-[90%]
       desktop:w-[360px]
@@ -196,7 +196,7 @@ Error generating stack: `+i.message+`
         group-hover:bg-clip-text group-hover:text-transparent
          group-hover:bg-custom-gradient
 
-        `,children:a})})]})}function hp(){return m.jsx("div",{className:`
+        `,children:a})})]})}function gp(){return m.jsx("div",{className:`
       h-full
       w-[80%] 
       tablet:w-[90%]
@@ -211,13 +211,13 @@ Error generating stack: `+i.message+`
      laptop:grid-cols-2 desktop:grid-cols-
         rounded-xl
        
-     `,children:pp.map((f,v)=>m.jsx(mp,{icon:f.icon,url:f.homepage,name:f.name},v))})}function gp(){const{ref:f,isVisible:v}=Fn(),[a,E]=ge.useState(!1);return v&&!a&&E(!0),m.jsxs("div",{ref:f,id:"skills",className:`laptop:pl-4
+     `,children:mp.map((f,v)=>m.jsx(hp,{icon:f.icon,url:f.homepage,name:f.name},v))})}function vp(){const{ref:f,isVisible:v}=Fn(),[a,E]=ge.useState(!1);return v&&!a&&E(!0),m.jsxs("div",{ref:f,id:"skills",className:`laptop:pl-4
     mt-16 laptop:mt-24
     tablet:pt-8 laptop:pt-0
      mx-auto
      pb-20
      tablet:pb-24
-     ${a?"translate-y-2 opacity-100":"-translate-y-2 opacity-0"} duration-500`,children:[m.jsx("div",{className:"w-[90%] laptop:w-[95%] mx-auto",children:m.jsx(Nr,{header:dp})}),m.jsx(hp,{})]})}const vp=""+new URL("sxc-D5kgSUxX.png",import.meta.url).href,yp=""+new URL("seneca-CqpfTgIW.jpg",import.meta.url).href,wp=""+new URL("coursera-DCETqjlQ.svg",import.meta.url).href,xp="Academic Profile",kp=[{id:1,img:yp,name:"Seneca Polytechnic",course:"Honours Bachelor of Data Science and Analytics",date:"Sep 2023 - Aug 2027",url:"https://www.senecapolytechnic.ca/programs/fulltime/DSA.html"},{id:2,img:vp,name:"St.Xavier's College, Maitighar",course:"High school, Physics",date:"Jul 2018 - Aug 2020",url:"https://www.sxc.edu.np/"},{id:3,img:wp,name:"Coursera",course:"Google Advanced Data Analytics Certificate",date:"Issued Nov 2024",url:"https://www.credly.com/badges/68666069-aa64-431a-a831-4f8a2f5ee1b7/linked_in_profile"}];function Sp({img:f,course:v,name:a,date:E,url:z}){return m.jsxs("div",{className:`
+     ${a?"translate-y-2 opacity-100":"-translate-y-2 opacity-0"} duration-500`,children:[m.jsx("div",{className:"w-[90%] laptop:w-[95%] mx-auto",children:m.jsx(Nr,{header:pp})}),m.jsx(gp,{})]})}const yp=""+new URL("sxc-D5kgSUxX.png",import.meta.url).href,wp=""+new URL("seneca-CqpfTgIW.jpg",import.meta.url).href,xp=""+new URL("coursera-DCETqjlQ.svg",import.meta.url).href,kp="Academic Profile",Sp=[{id:1,img:wp,name:"Seneca Polytechnic",course:"Honours Bachelor of Data Science and Analytics",date:"Sep 2023 - Aug 2027",url:"https://www.senecapolytechnic.ca/programs/fulltime/DSA.html"},{id:2,img:yp,name:"St.Xavier's College, Maitighar",course:"High school, Physics",date:"Jul 2018 - Aug 2020",url:"https://www.sxc.edu.np/"},{id:3,img:xp,name:"Coursera",course:"Google Advanced Data Analytics Certificate",date:"Issued Nov 2024",url:"https://www.credly.com/badges/68666069-aa64-431a-a831-4f8a2f5ee1b7/linked_in_profile"}];function Ep({img:f,course:v,name:a,date:E,url:z}){return m.jsxs("div",{className:`
        
       mx-auto laptop:mx-0
       w-[95%] tablet:w-[85%]
@@ -257,17 +257,17 @@ Error generating stack: `+i.message+`
             group-hover:bg-clip-text group-hover:text-transparent
          group-hover:bg-custom-gradient
             `,children:a}),m.jsx("h1",{className:`text-graylight 
-            text-sm tablet:text-lg `,children:v}),m.jsx("h1",{className:"text-graylight text-xs tablet:text-sm ",children:E})]})})]})]})}function Ep(){return m.jsx("div",{className:`
+            text-sm tablet:text-lg `,children:v}),m.jsx("h1",{className:"text-graylight text-xs tablet:text-sm ",children:E})]})})]})]})}function Cp(){return m.jsx("div",{className:`
       w-full h-full
       mt-4 tablet:mt-10 laptop:mt-0
      py-8 tablet:py-2 laptop:py-12
     
   
-  `,children:kp.map((f,v)=>ge.createElement(Sp,{...f,key:v}))})}function Cp(){const{ref:f,isVisible:v}=Fn(),[a,E]=ge.useState(!1);return v&&!a&&E(!0),m.jsxs("div",{id:"education",ref:f,className:`tablet:pt-8 laptop:pt-0
+  `,children:Sp.map((f,v)=>ge.createElement(Ep,{...f,key:v}))})}function Np(){const{ref:f,isVisible:v}=Fn(),[a,E]=ge.useState(!1);return v&&!a&&E(!0),m.jsxs("div",{id:"education",ref:f,className:`tablet:pt-8 laptop:pt-0
       laptop:pl-6
         pb-8
         w-[90%] laptop:w-[95%] mx-auto
-        ${a?"translate-y-2 opacity-100":"-translate-y-2 opacity-0"} duration-500`,children:[m.jsx(Nr,{header:xp}),m.jsx(Ep,{})]})}const Np="Let's work together";function qa({message:f,position:v="top"}){return m.jsxs("div",{className:`absolute z-10 flex items-center px-4 py-1 tablet:py-1 bg-white border border-gray-300 rounded-lg shadow-md text-gray-800 text-sm ${v==="top"?"bottom-full right-0 mb-2":"top-full right-0 mt-1"}`,children:[m.jsx("div",{className:`absolute ${v==="top"?"top-full -translate-y-2":"bottom-full translate-y-2"} w-0 h-0 border-[6px] border-transparent ${v==="top"?"border-t-gray-300":"border-b-gray-300"}`}),m.jsxs("div",{className:"flex items-center",children:[m.jsx("span",{role:"img","aria-label":"warning",className:"text-orange-500 text-xl mr-2",children:"⚠️"}),f||"This field is required."]})]})}const jp="Please enter a valid email",_p="Please fill in all fields",Bo="Thank you",Vo="Send",ba="Error sending please try again";function Ya({label:f,placeholder:v,inputState:a,setInputState:E,submitted:z,setSubmitted:F,validate:X,validationError:V,buttonLabel:I,setButtonLabel:Z}){const[de,J]=ge.useState(!1);return m.jsxs("div",{className:"h-full w-[88%] mx-auto relative",children:[m.jsx("div",{className:"h-1/3 w-full",children:m.jsx("h1",{className:`
+        ${a?"translate-y-2 opacity-100":"-translate-y-2 opacity-0"} duration-500`,children:[m.jsx(Nr,{header:kp}),m.jsx(Cp,{})]})}const jp="Let's work together";function qa({message:f,position:v="top"}){return m.jsxs("div",{className:`absolute z-10 flex items-center px-4 py-1 tablet:py-1 bg-white border border-gray-300 rounded-lg shadow-md text-gray-800 text-sm ${v==="top"?"bottom-full right-0 mb-2":"top-full right-0 mt-1"}`,children:[m.jsx("div",{className:`absolute ${v==="top"?"top-full -translate-y-2":"bottom-full translate-y-2"} w-0 h-0 border-[6px] border-transparent ${v==="top"?"border-t-gray-300":"border-b-gray-300"}`}),m.jsxs("div",{className:"flex items-center",children:[m.jsx("span",{role:"img","aria-label":"warning",className:"text-orange-500 text-xl mr-2",children:"⚠️"}),f||"This field is required."]})]})}const _p="Please enter a valid email",Pp="Please fill in all fields",Bo="Thank you",Vo="Send",ba="Error sending please try again";function Ya({label:f,placeholder:v,inputState:a,setInputState:E,submitted:z,setSubmitted:F,validate:X,validationError:V,buttonLabel:I,setButtonLabel:Z}){const[de,J]=ge.useState(!1);return m.jsxs("div",{className:"h-full w-[88%] mx-auto relative",children:[m.jsx("div",{className:"h-1/3 w-full",children:m.jsx("h1",{className:`
         text-graylight 
         text-sm tablet:text-base
         px-4 tablet:px-6
@@ -280,7 +280,7 @@ Error generating stack: `+i.message+`
             text-white
             text-sm
             px-5 tablet:px-6
-          `,value:a,onChange:q=>{E(q.target.value),F(!1),(I==Bo||I==ba)&&Z(Vo)},onFocus:()=>J(!0),onBlur:()=>J(!1)}),z&&(!a||X&&V)&&m.jsx(qa,{message:a?V||"Invalid value":`${f} is required`,position:"bottom"})]})]})}function Pp({label:f,placeholder:v,inputState:a,setInputState:E,submitted:z,buttonLabel:F,setButtonLabel:X}){const[V,I]=ge.useState(!1);return m.jsxs("div",{className:"h-full w-[88%] mx-auto",children:[m.jsx("div",{className:"1/6 w-full",children:m.jsx("h1",{className:`
+          `,value:a,onChange:q=>{E(q.target.value),F(!1),(I==Bo||I==ba)&&Z(Vo)},onFocus:()=>J(!0),onBlur:()=>J(!1)}),z&&(!a||X&&V)&&m.jsx(qa,{message:a?V||"Invalid value":`${f} is required`,position:"bottom"})]})]})}function zp({label:f,placeholder:v,inputState:a,setInputState:E,submitted:z,buttonLabel:F,setButtonLabel:X}){const[V,I]=ge.useState(!1);return m.jsxs("div",{className:"h-full w-[88%] mx-auto",children:[m.jsx("div",{className:"1/6 w-full",children:m.jsx("h1",{className:`
         text-graylight 
         text-sm tablet:text-base
         px-4 tablet:px-6
@@ -294,7 +294,7 @@ Error generating stack: `+i.message+`
         outline-none text-white text-sm 
         px-5 tablet:px-6 
         pt-3 tablet:pt-4
-        `,onFocus:()=>I(!V),onBlur:()=>I(!V),onChange:Z=>{E(Z.target.value),(F==Bo||F==ba)&&X(Vo)},value:a}),z&&!a&&m.jsx(qa,{message:`${f} is required`,position:"bottom"})]})]})}const zp=(f,v,a)=>{console.log({name:f,email:v,message:a})};function Lp(){const[f,v]=ge.useState(""),[a,E]=ge.useState(""),[z,F]=ge.useState(""),[X,V]=ge.useState(!1),[I,Z]=ge.useState(Vo),de=()=>{if(!f||!a||!z){V(!0),Z(jp);return}if(!Ka(a)){V(!0),Z(_p);return}v(""),E(""),F(""),V(!1),Z(Bo),zp(f,a,z)};return m.jsxs("div",{className:`
+        `,onFocus:()=>I(!V),onBlur:()=>I(!V),onChange:Z=>{E(Z.target.value),(F==Bo||F==ba)&&X(Vo)},value:a}),z&&!a&&m.jsx(qa,{message:`${f} is required`,position:"bottom"})]})]})}const Lp=(f,v,a)=>{console.log({name:f,email:v,message:a})};function Rp(){const[f,v]=ge.useState(""),[a,E]=ge.useState(""),[z,F]=ge.useState(""),[X,V]=ge.useState(!1),[I,Z]=ge.useState(Vo),de=()=>{if(!f||!a||!z){V(!0),Z(_p);return}if(!Ka(a)){V(!0),Z(Pp);return}v(""),E(""),F(""),V(!1),Z(Bo),Lp(f,a,z)};return m.jsxs("div",{className:`
       mt-6 tablet:mt-8 laptop:mt-10
       rounded-3xl
     h-96 tablet:h-[500px] laptop:h-[540px] desktop:h-[540px]
@@ -305,7 +305,7 @@ Error generating stack: `+i.message+`
         rounded-3xl
         pt-4 tablet:pt-5 
         pb-9 tablet:pb-12
-      `,children:[m.jsx("div",{className:"h-1/5",children:m.jsx(Ya,{label:"Name",placeholder:"Your Name",inputState:f,setInputState:v,submitted:X,setSubmitted:V,buttonLabel:I,setButtonLabel:Z})}),m.jsx("div",{className:"h-1/5",children:m.jsx(Ya,{label:"Email",placeholder:"Your Email",inputState:a,setInputState:E,submitted:X,setSubmitted:V,buttonLabel:I,setButtonLabel:Z,validate:!0,validationError:Ka(a)?null:"Invalid email address"})}),m.jsx("div",{className:"h-2/5",children:m.jsx(Pp,{label:"Message",placeholder:"Message",inputState:z,setInputState:F,submitted:X,buttonLabel:I,setButtonLabel:Z})}),m.jsx("div",{className:"w-[88%] mx-auto",children:m.jsx("button",{className:`
+      `,children:[m.jsx("div",{className:"h-1/5",children:m.jsx(Ya,{label:"Name",placeholder:"Your Name",inputState:f,setInputState:v,submitted:X,setSubmitted:V,buttonLabel:I,setButtonLabel:Z})}),m.jsx("div",{className:"h-1/5",children:m.jsx(Ya,{label:"Email",placeholder:"Your Email",inputState:a,setInputState:E,submitted:X,setSubmitted:V,buttonLabel:I,setButtonLabel:Z,validate:!0,validationError:Ka(a)?null:"Invalid email address"})}),m.jsx("div",{className:"h-2/5",children:m.jsx(zp,{label:"Message",placeholder:"Message",inputState:z,setInputState:F,submitted:X,buttonLabel:I,setButtonLabel:Z})}),m.jsx("div",{className:"w-[88%] mx-auto",children:m.jsx("button",{className:`
             mt-12 tablet:mt-16
             h-9 tablet:h-11 laptop:h-12
             rounded-xl
@@ -316,7 +316,7 @@ Error generating stack: `+i.message+`
             duration-300
             text-sm tablet:text-base text-white
 
-             `,onClick:de,children:I})})]})]})}function Rp(){const{ref:f,isVisible:v}=Fn(),[a,E]=ge.useState(!1);return v&&!a&&E(!0),m.jsxs("div",{id:"contact",ref:f,className:`
+             `,onClick:de,children:I})})]})]})}function Tp(){const{ref:f,isVisible:v}=Fn(),[a,E]=ge.useState(!1);return v&&!a&&E(!0),m.jsxs("div",{id:"contact",ref:f,className:`
         min-h-[80vh] 
         laptop:h-full
         h-full
@@ -325,7 +325,7 @@ Error generating stack: `+i.message+`
    tablet:pt-8 laptop:pt-0
    w-[90%] laptop:w-[95%] mx-auto
     
-   ${a?"translate-y-2 opacity-100":"-translate-y-2 opacity-0"} duration-500`,children:[m.jsx(Nr,{header:Np}),m.jsx(Lp,{})]})}function Tp(){const f=new Date().getFullYear();return m.jsx("div",{className:`w-full flex items-center 
+   ${a?"translate-y-2 opacity-100":"-translate-y-2 opacity-0"} duration-500`,children:[m.jsx(Nr,{header:jp}),m.jsx(Rp,{})]})}function Op(){const f=new Date().getFullYear();return m.jsx("div",{className:`w-full flex items-center 
         pt-24 
       justify-center
        ${xd()?"laptop:justify-start":""}
@@ -333,7 +333,7 @@ Error generating stack: `+i.message+`
       tablet:pb-16
       
       `,children:m.jsxs("h1",{className:`bg-clip-text text-transparent bg-custom-gradient
-        text-lg tablet:text-2xl `,children:["© ",Ja," ",f]})})}function Op(){return m.jsxs("div",{className:`
+        text-lg tablet:text-2xl `,children:["© ",Ja," ",f]})})}function Mp(){return m.jsxs("div",{className:`
     pt-32 laptop:pt-28
     laptop:pl-8
     
@@ -341,7 +341,7 @@ Error generating stack: `+i.message+`
     mx-auto laptop:mx-0
     
   
-    `,children:[m.jsx(Dd,{}),m.jsx($d,{}),m.jsx(gp,{}),m.jsx(Cp,{}),m.jsx(Rp,{}),m.jsx("div",{children:m.jsx(Tp,{})})]})}function Mp(){return m.jsxs("div",{className:`laptop:w-[95%] desktop:w-[92%] max-w-screen-desktop h-full 
+    `,children:[m.jsx(Dd,{}),m.jsx(Wd,{}),m.jsx(vp,{}),m.jsx(Np,{}),m.jsx(Tp,{}),m.jsx("div",{children:m.jsx(Op,{})})]})}function Dp(){return m.jsxs("div",{className:`laptop:w-[95%] desktop:w-[92%] max-w-screen-desktop h-full 
       flex 
       flex-col laptop:flex-row
 
@@ -353,13 +353,13 @@ Error generating stack: `+i.message+`
       laptop:w-1/3 `,children:m.jsx(Nd,{})}),m.jsx("div",{className:`
       
       laptop:w-2/3 laptop:ml-1/3 
-      overflow-y-auto h-full bg-black`,children:m.jsx(Op,{})})]})}function Cr({icon:f,label:v,ID:a}){return m.jsxs("div",{className:"w-full cursor-pointer group",onClick:()=>wd(a),children:[m.jsx("div",{className:`mx-auto h-full w-full 
+      overflow-y-auto h-full bg-black`,children:m.jsx(Mp,{})})]})}function Cr({icon:f,label:v,ID:a}){return m.jsxs("div",{className:"w-full cursor-pointer group",onClick:()=>wd(a),children:[m.jsx("div",{className:`mx-auto h-full w-full 
         py-2 flex items-center justify-center
       `,children:f}),m.jsx("div",{className:`text-xs  text-white opacity-0 -translate-y-4
         laptop:px-2
         laptop:group-hover:opacity-100 laptop:group-hover:translate-y-2 
         duration-300 ease-in-out bg-gray rounded-lg text-center 
-        `,children:v})]})}function Dp(f){return at({tag:"svg",attr:{viewBox:"0 0 24 24"},child:[{tag:"path",attr:{d:"M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144l-7.5-6.363Z"},child:[]}]})(f)}function Ip(f){return at({tag:"svg",attr:{viewBox:"0 0 20 20",fill:"currentColor","aria-hidden":"true"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M9.664 1.319a.75.75 0 0 1 .672 0 41.059 41.059 0 0 1 8.198 5.424.75.75 0 0 1-.254 1.285 31.372 31.372 0 0 0-7.86 3.83.75.75 0 0 1-.84 0 31.508 31.508 0 0 0-2.08-1.287V9.394c0-.244.116-.463.302-.592a35.504 35.504 0 0 1 3.305-2.033.75.75 0 0 0-.714-1.319 37 37 0 0 0-3.446 2.12A2.216 2.216 0 0 0 6 9.393v.38a31.293 31.293 0 0 0-4.28-1.746.75.75 0 0 1-.254-1.285 41.059 41.059 0 0 1 8.198-5.424ZM6 11.459a29.848 29.848 0 0 0-2.455-1.158 41.029 41.029 0 0 0-.39 3.114.75.75 0 0 0 .419.74c.528.256 1.046.53 1.554.82-.21.324-.455.63-.739.914a.75.75 0 1 0 1.06 1.06c.37-.369.69-.77.96-1.193a26.61 26.61 0 0 1 3.095 2.348.75.75 0 0 0 .992 0 26.547 26.547 0 0 1 5.93-3.95.75.75 0 0 0 .42-.739 41.053 41.053 0 0 0-.39-3.114 29.925 29.925 0 0 0-5.199 2.801 2.25 2.25 0 0 1-2.514 0c-.41-.275-.826-.541-1.25-.797a6.985 6.985 0 0 1-1.084 3.45 26.503 26.503 0 0 0-1.281-.78A5.487 5.487 0 0 0 6 12v-.54Z",clipRule:"evenodd"},child:[]}]})(f)}function Fp(){return m.jsxs("div",{className:`w-full fixed top-0 mx-auto bg-black
+        `,children:v})]})}function Ip(f){return at({tag:"svg",attr:{viewBox:"0 0 24 24"},child:[{tag:"path",attr:{d:"M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144l-7.5-6.363Z"},child:[]}]})(f)}function Fp(f){return at({tag:"svg",attr:{viewBox:"0 0 20 20",fill:"currentColor","aria-hidden":"true"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M9.664 1.319a.75.75 0 0 1 .672 0 41.059 41.059 0 0 1 8.198 5.424.75.75 0 0 1-.254 1.285 31.372 31.372 0 0 0-7.86 3.83.75.75 0 0 1-.84 0 31.508 31.508 0 0 0-2.08-1.287V9.394c0-.244.116-.463.302-.592a35.504 35.504 0 0 1 3.305-2.033.75.75 0 0 0-.714-1.319 37 37 0 0 0-3.446 2.12A2.216 2.216 0 0 0 6 9.393v.38a31.293 31.293 0 0 0-4.28-1.746.75.75 0 0 1-.254-1.285 41.059 41.059 0 0 1 8.198-5.424ZM6 11.459a29.848 29.848 0 0 0-2.455-1.158 41.029 41.029 0 0 0-.39 3.114.75.75 0 0 0 .419.74c.528.256 1.046.53 1.554.82-.21.324-.455.63-.739.914a.75.75 0 1 0 1.06 1.06c.37-.369.69-.77.96-1.193a26.61 26.61 0 0 1 3.095 2.348.75.75 0 0 0 .992 0 26.547 26.547 0 0 1 5.93-3.95.75.75 0 0 0 .42-.739 41.053 41.053 0 0 0-.39-3.114 29.925 29.925 0 0 0-5.199 2.801 2.25 2.25 0 0 1-2.514 0c-.41-.275-.826-.541-1.25-.797a6.985 6.985 0 0 1-1.084 3.45 26.503 26.503 0 0 0-1.281-.78A5.487 5.487 0 0 0 6 12v-.54Z",clipRule:"evenodd"},child:[]}]})(f)}function Up(){return m.jsxs("div",{className:`w-full fixed top-0 mx-auto bg-black
     py-6 tablet:py-8 z-50`,children:[m.jsx("div",{className:`absolute w-[278px] tablet:w-[358px]
        rounded-3xl mx-auto bg-whitenoise inset-0
        my-6 tablet:my-8`}),m.jsxs("div",{className:`relative w-[280px] tablet:w-[360px] flex rounded-3xl text-white
@@ -367,5 +367,5 @@ Error generating stack: `+i.message+`
          mx-auto
          bg-graydark bg-opacity-90
 
-    `,children:[m.jsx(Cr,{icon:m.jsx(Dp,{}),label:"Home",ID:"home"}),m.jsx(Cr,{icon:m.jsx(vd,{}),label:"Projects",ID:"projects"}),m.jsx(Cr,{icon:m.jsx(gd,{}),label:"Skills",ID:"skills"}),m.jsx(Cr,{icon:m.jsx(Ip,{}),label:"Education",ID:"education"}),m.jsx(Cr,{icon:m.jsx(Od,{}),label:"Contact",ID:"contact"})]})]})}function Up(){return m.jsxs("div",{className:`h-full bg-black w-full
-     `,children:[m.jsx("div",{className:"relative bg-black",children:m.jsx(Fp,{})}),m.jsx(Mp,{})]})}id.createRoot(document.getElementById("root")).render(m.jsx(ge.StrictMode,{children:m.jsx(Up,{})}));
+    `,children:[m.jsx(Cr,{icon:m.jsx(Ip,{}),label:"Home",ID:"home"}),m.jsx(Cr,{icon:m.jsx(vd,{}),label:"Projects",ID:"projects"}),m.jsx(Cr,{icon:m.jsx(gd,{}),label:"Skills",ID:"skills"}),m.jsx(Cr,{icon:m.jsx(Fp,{}),label:"Education",ID:"education"}),m.jsx(Cr,{icon:m.jsx(Od,{}),label:"Contact",ID:"contact"})]})]})}function Ap(){return m.jsxs("div",{className:`h-full bg-black w-full
+     `,children:[m.jsx("div",{className:"relative bg-black",children:m.jsx(Up,{})}),m.jsx(Dp,{})]})}id.createRoot(document.getElementById("root")).render(m.jsx(ge.StrictMode,{children:m.jsx(Ap,{})}));
