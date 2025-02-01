@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+/**Add one for a bigger laptop: 1536px**/
 
 const plugin = require("tailwindcss/plugin");
 export default {
