@@ -26,10 +26,10 @@ export default {
         laptop: "1024px",
         // => @media (min-width: 1024px) { ... }
 
-        desktop: "1496px",
-        // => @media (min-width: 1496px) { ... }
+        desktop: "1540px",
+        // => @media (min-width: 1540px) { ... }
 
-        "2xl": "1620px",
+        "2xl": "1720px",
         // => @media (min-width: 1620px) { ... }
       },
       colors: {
