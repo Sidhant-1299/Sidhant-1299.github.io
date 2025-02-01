@@ -26,11 +26,11 @@ export default {
         laptop: "1024px",
         // => @media (min-width: 1024px) { ... }
 
-        desktop: "1280px",
-        // => @media (min-width: 1280px) { ... }
+        desktop: "1496px",
+        // => @media (min-width: 1496px) { ... }
 
-        "2xl": "1536px",
-        // => @media (min-width: 1536px) { ... }
+        "2xl": "1620px",
+        // => @media (min-width: 1620px) { ... }
       },
       colors: {
         white: "#f2f2f2",
