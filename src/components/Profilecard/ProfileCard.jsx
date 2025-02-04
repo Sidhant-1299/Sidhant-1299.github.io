@@ -25,6 +25,7 @@ function ProfileCard() {
       tablet:h-[500px] tablet:w-[80%]
       laptop:h-[560px] laptop:w-[340px]
     desktop:h-[600px] desktop:w-[400px]
+
     ${hasAnimated ? "translate-y-2 opacity-100" : "-translate-y-2 opacity-0"}
     duration-500
     `}
