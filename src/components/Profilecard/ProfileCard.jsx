@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import sidhant from "../../assets/sidhant.png";
+// import sidhant from "../../assets/sidhant.png";
+import sidhant from "../../assets/sidhant.webp";
 import { FaLinkedin } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa";
