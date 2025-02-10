@@ -20,6 +20,7 @@ function Projects() {
       className={`laptop:pl-4
      mt-16 tablet:mt-20 laptop:mt-24
      tablet:pt-8 laptop:pt-0
+     laptop:pb-8
      w-[90%] laptop:w-[95%] mx-auto
      ${
        hasAnimated ? "translate-y-2 opacity-100" : "-translate-y-2 opacity-0"

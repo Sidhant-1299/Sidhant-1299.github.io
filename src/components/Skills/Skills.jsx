@@ -17,7 +17,7 @@ function Skills() {
       ref={ref}
       id="skills"
       className={`laptop:pl-4
-    mt-16 laptop:mt-24
+    mt-16 laptop:mt-20
     tablet:pt-8 laptop:pt-0
      mx-auto
      pb-20

@@ -26,3 +26,8 @@ public/
 *.njsproj
 *.sln
 *.sw?
+
+.gitignore
+
+#asset files not required
+/src/assets/Projects/probability.png

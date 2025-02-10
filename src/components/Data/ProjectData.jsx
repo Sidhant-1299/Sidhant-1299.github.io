@@ -1,7 +1,8 @@
 import classification_tiktok from "../../assets/Projects/classification_tiktok.png";
 import penguins from "../../assets/Projects/penguins.png";
-import probability from "../../assets/Projects/probability.png";
+// import probability from "../../assets/Projects/probability.png";
 import kmeans from "../../assets/Projects/KMeans_Visualizer.jpg";
+import perceptron from "../../assets/Projects/perceptron.png";
 
 export const header = "Recent projects";
 
@@ -31,10 +32,10 @@ export const MyProjects = [
   },
   {
     id: 4,
-    url: "https://github.com/Sidhant-1299/CoinToss",
-    img: probability,
-    header: "Coin Toss",
+    url: "https://github.com/Sidhant-1299/Perceptron",
+    img: perceptron,
+    header: "Perceptron in Python",
     description:
-      "Simulating a million coin toss to determine if it has a normal distribution",
-  }
+      "A perceptron for binary classification of Iris dataset using a linear decision boundary",
+  },
 ];

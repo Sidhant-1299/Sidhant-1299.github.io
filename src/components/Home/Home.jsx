@@ -18,7 +18,7 @@ function Home() {
       id="home"
       ref={ref}
       className={`bg-black
-      tablet:pt-8 laptop:pt-0
+      tablet:pt-8 laptop:pt-0 
       laptop:pl-8
      pb-8 ${
        hasAnimated ? "translate-y-2 opacity-100" : "-translate-y-2 opacity-0"
