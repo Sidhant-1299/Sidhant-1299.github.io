@@ -1,6 +1,5 @@
 import classification_tiktok from "../../assets/Projects/classification_tiktok.png";
-import penguins from "../../assets/Projects/penguins.png";
-// import probability from "../../assets/Projects/probability.png";
+import jameswebb from "../../assets/Projects/james_webb.jpg";
 import kmeans from "../../assets/Projects/KMeans_Visualizer.jpg";
 import perceptron from "../../assets/Projects/perceptron.png";
 
@@ -9,11 +8,11 @@ export const header = "Recent projects";
 export const MyProjects = [
   {
     id: 1,
-    url: "https://github.com/Sidhant-1299/LinearRegressionWithPenguins",
-    img: penguins,
-    header: "Linear Regression with Penguins",
+    url: "https://github.com/Sidhant-1299/Exoplanet-Exploration",
+    img: jameswebb,
+    header: "Exoplanet Exploration EDA",
     description:
-      "Using Linear regression to find relationship between features of Penguins dataset",
+      "Analyze and understand the properties of discovered exoplanets to uncover patterns",
   },
   {
     id: 2,
