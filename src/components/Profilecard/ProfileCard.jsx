@@ -37,7 +37,7 @@ function ProfileCard() {
         className=" bg-graydark bg-opacity-[0.93] rounded-2xl
         pt-1 tablet:pt-2 laptop:pt-1
         h-full w-full pb-1
-    laptop:pb-6 desktop:pb-2
+    laptop:pb-6 desktop:pb-0
     "
       >
         {/* IMAGE */}
@@ -98,7 +98,7 @@ function ProfileCard() {
              h-2/5 laptop:h-2/5
               laptop:w-full justify-center items-center mx-auto
             desktop:pb-4 pb-8 laptop:pb-0 
-            pt-3 tablet:pt-0  laptop:pt-5 desktop:pt-4
+            pt-3 tablet:pt-0  laptop:pt-5 desktop:pt-2
             laptop:my-auto desktop:my-0"
             >
               <ProfileCardIcon icon={<FaLinkedin />} link={linkedIn} />
