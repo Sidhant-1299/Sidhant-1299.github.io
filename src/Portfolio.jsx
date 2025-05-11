@@ -19,7 +19,7 @@ function Portfolio() {
         className=" laptop:relative h-full  
         pt-28 laptop:pt-0
         laptop:top-28 
-      laptop:w-1/3 "
+      laptop:w-[35%] desktop:1/3 "
       >
         <ProfileCard />
       </div>
