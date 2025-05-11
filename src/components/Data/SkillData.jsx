@@ -1,4 +1,4 @@
-import TensorFlow from "../../assets/Skills/TensorFlow.png";
+import cpp from "../../assets/Skills/cpp.png";
 import tableau from "../../assets/Skills/tableau.png";
 import Git from "../../assets/Skills/Git.png";
 import python from "../../assets/Skills/python.png";
@@ -27,41 +27,17 @@ export const header = "Skill Highlights";
 export const skills = [
   { icon: python, name: "Python", homepage: "https://www.python.org/" },
   {
-    icon: JavaScript,
-    name: "JavaScript",
-    homepage: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    icon: cpp,
+    name: "C++",
+    homepage: "https://en.cppreference.com/w/",
   },
   { icon: R, name: "R", homepage: "https://www.r-project.org/" },
   { icon: MySQL, name: "MySQL", homepage: "https://www.mysql.com/" },
-  {
-    icon: PostgresSQL,
-    name: "PostgreSQL",
-    homepage: "https://www.postgresql.org/",
-  },
-  { icon: MongoDB, name: "MongoDB", homepage: "https://www.mongodb.com/" },
-  {
-    icon: cassandra,
-    name: "Cassandra",
-    homepage: "https://cassandra.apache.org/",
-  },
-  { icon: neo4j, name: "Neo4j", homepage: "https://neo4j.com/" },
-  {
-    icon: Oracle,
-    name: "Oracle SQL",
-    homepage: "https://www.oracle.com/ca-en/database/sqldeveloper/",
-  },
-  // {
-  //   icon: TensorFlow,
-  //   name: "TensorFlow",
-  //   homepage: "https://www.tensorflow.org/",
-  // },
   { icon: PyTorch, name: "PyTorch", homepage: "https://pytorch.org/" },
-  { icon: Keras, name: "Keras", homepage: "https://keras.io/" },
-  { icon: react, name: "React", homepage: "https://reactjs.org/" },
   {
-    icon: tailwind,
-    name: "Tailwind CSS",
-    homepage: "https://tailwindcss.com/",
+    icon: JavaScript,
+    name: "JavaScript",
+    homepage: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   { icon: pandas, name: "Pandas", homepage: "https://pandas.pydata.org/" },
   { icon: numpy, name: "NumPy", homepage: "https://numpy.org/" },
@@ -92,6 +68,30 @@ export const skills = [
     name: "Scikit learn",
     homepage: "https://scikit-learn.org/stable/",
   },
+  {
+    icon: PostgresSQL,
+    name: "PostgreSQL",
+    homepage: "https://www.postgresql.org/",
+  },
+  { icon: MongoDB, name: "MongoDB", homepage: "https://www.mongodb.com/" },
+  {
+    icon: cassandra,
+    name: "Cassandra",
+    homepage: "https://cassandra.apache.org/",
+  },
+  { icon: neo4j, name: "Neo4j", homepage: "https://neo4j.com/" },
+  {
+    icon: Oracle,
+    name: "Oracle SQL",
+    homepage: "https://www.oracle.com/ca-en/database/sqldeveloper/",
+  },
+  { icon: react, name: "React", homepage: "https://reactjs.org/" },
+  {
+    icon: tailwind,
+    name: "Tailwind CSS",
+    homepage: "https://tailwindcss.com/",
+  },
+
   //   { icon: stats, name: "Statistics", homepage: "https://en.wikipedia.org/wiki/Statistics" },
   //   { icon: matrix, name: "Matrix Algebra", homepage: "https://en.wikipedia.org/wiki/Matrix_(mathematics)" },
 ];
