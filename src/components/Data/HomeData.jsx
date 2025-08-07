@@ -1,4 +1,4 @@
-export const header = "Data analyst";
+export const header = "Data Scientist"; // automatically capitalized
 
 export const introduction =
   "I'm a Data Science and Analytics student\
