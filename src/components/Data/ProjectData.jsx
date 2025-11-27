@@ -3,8 +3,8 @@ import jameswebb from "../../assets/Projects/james_webb.jpg";
 import kmeans from "../../assets/Projects/KMeans_Visualizer.jpg";
 import perceptron from "../../assets/Projects/perceptron.png";
 import mlr from "../../assets/Projects/MLR_regression.png";
-import book_recommender from "../../assets/Projects/semantic_book_recommender.png";
-import yt_analyzer from "../../assets/Projects/youtube_sentiment_analyzer.png";
+import book_recommender from "../../assets/Projects/semantic_book_recommender_cropped_processed_by_imagy.png";
+import yt_analyzer from "../../assets/Projects/youtube_sentiment_analyzer_cropped_processed_by_imagy.png";
 
 
 export const header = "Recent projects";
