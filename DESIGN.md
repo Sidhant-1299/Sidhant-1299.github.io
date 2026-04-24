@@ -4,7 +4,7 @@
 Recreate the feel of the archived Kirschberg site using the user's cinematic warm-dark theme system, while simplifying motion-heavy behavior into a React + Tailwind architecture that is easier to build, maintain, and extend.
 
 ## 2. Product Framing
-This is not a generic portfolio. It should feel like a curated design archive with a calm, premium, editorial tone.
+This is not a generic portfolio. It should feel like a curated cinematic portfolio with a calm, premium, editorial tone.
 
 Core read:
 - sparse navigation
@@ -22,7 +22,7 @@ When the two conflict, keep the structure of Kirschberg but the color, texture, 
 Implement four top-level routes:
 - `/` Home
 - `/work` Work
-- `/archive` Archive
+- `/academic` Academic
 - `/about` About
 
 Optional detail routes:
@@ -122,17 +122,19 @@ Alternate between:
 - add captions only when useful
 - avoid busy collage layouts unless the project genuinely needs them
 
-## 9. Archive Page
+## 9. Academic Page
 ### Goal
-A secondary visual scrapbook.
+Show education, certifications, skills, tools, and academic-adjacent proof without turning the site into a resume dump.
 
 ### Structure
-- dense grid of experiments, photos, branding fragments, posters, and older work
+- education and certification cards
+- skills and tools grouped as proof of current capability
+- optional academic timeline or credential grid
 - lighter metadata than the main Work page
-- items can open in modal, lightbox, or detail overlay
+- items may link out to institutions, credentials, or relevant proof
 
 ### Design Feel
-This page can be slightly more raw and exploratory, but it still belongs to the same system.
+This page should feel precise and credible while still belonging to the same warm-dark cinematic system.
 
 ## 10. About Page
 ### Goal
@@ -232,7 +234,7 @@ The page then repeats cards to create a looped or extended scrolling field. Trea
 3. work page card system
 4. project detail template
 5. about page
-6. archive grid
+6. academic page
 7. motion polish
 8. responsive pass
 9. accessibility and contrast pass
