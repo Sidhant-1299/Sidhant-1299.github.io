@@ -14,8 +14,9 @@
 ## Repo Reality
 - `README.md` is still the default Vite template and is not a reliable description of the product.
 - The real entrypoint is `src/main.jsx`, which only renders `src/App.jsx`.
-- The current app is a single-page Tailwind shell. There is no router, page directory, or reusable component system yet.
-- Styling is Tailwind v4 through `src/index.css`, which currently contains only `@import "tailwindcss";`. There is no Tailwind config file in use.
+- The current app is a lightweight single-page router in `src/App.jsx` with route modules under `src/pages/`.
+- Shared UI primitives live in `src/components/`; keep them small and specific to repeated portfolio patterns.
+- Styling is Tailwind v4 through `src/index.css` with semantic CSS variables. There is no Tailwind config file in use.
 - `vite.config.js` enables `@vitejs/plugin-react`, `@rolldown/plugin-babel`, and `reactCompilerPreset()`. Keep changes compatible with the React Compiler setup.
 - The repo is plain JS/JSX ESM, not TypeScript.
 - No test, typecheck, formatter, or CI workflow is configured right now.
@@ -59,6 +60,7 @@
 - Use `react-code` for React structure, route lazy loading, state, and component wiring.
 - Use `tailwind-responsive` for theme tokens, responsive layout, visual polish, and accessibility guardrails.
 - Use `playwright-feedback` after a feature runs locally to inspect desktop/mobile behavior and write reusable feedback here.
+- Use `senior-eng` for behavior-preserving refactors that improve modularity, code tidiness, and readability. It must not change `src/Data/*` without explicit user approval.
 - Create or use narrower feature agents when helpful: `home-hero`, `work-grid`, `academic-page`, `about-page`, `project-detail`, `shared-ui`, and `cleanup-legacy`.
 
 ## Feature Validation And Commits

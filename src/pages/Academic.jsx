@@ -1,5 +1,6 @@
 import { academicData } from '../Data/AcademicData.jsx'
 import { skills, tools } from '../Data/SkillData.jsx'
+import { Eyebrow, PageShell, Tag } from '../components/ui.jsx'
 
 const proofStats = [
   { label: 'Current track', value: 'Data Science' },
@@ -16,10 +17,10 @@ const skillGroups = skills.reduce((groups, skill) => {
 
 function Academic() {
   return (
-    <main className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-10 md:py-24 lg:px-16">
+    <PageShell>
       <section className="grid gap-8 md:grid-cols-[0.92fr_1.08fr] md:items-end">
         <div>
-          <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">Education / credentials / tools</p>
+          <Eyebrow>Education / credentials / tools</Eyebrow>
           <h1 className="mt-6 text-[clamp(4rem,10vw,9rem)] font-semibold leading-[0.84] tracking-[-0.07em] text-[var(--text-0)]">
             Academic<br />profile
           </h1>
@@ -48,7 +49,7 @@ function Academic() {
 
         <aside className="space-y-6">
           <section className="rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/76 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-7">
-            <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">Skills map</p>
+            <Eyebrow className="tracking-[0.2em]">Skills map</Eyebrow>
             <div className="mt-6 space-y-5">
               {[...skillGroups.entries()].map(([group, labels]) => (
                 <div key={group}>
@@ -64,7 +65,7 @@ function Academic() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--line-0)] bg-[linear-gradient(135deg,rgba(140,56,54,0.16),rgba(26,21,21,0.82)_46%,rgba(35,29,28,0.82))] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-7">
-            <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">Tools in rotation</p>
+            <Eyebrow className="tracking-[0.2em]">Tools in rotation</Eyebrow>
             <div className="mt-5 flex flex-wrap gap-2">
               {tools.map((tool) => (
                 <Tag key={tool}>{tool}</Tag>
@@ -76,13 +77,13 @@ function Academic() {
 
       <section className="mt-16 rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/60 p-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.26)] md:p-10 lg:p-14">
         <div className="mx-auto max-w-5xl">
-          <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">Academic direction</p>
+          <Eyebrow>Academic direction</Eyebrow>
           <p className="mt-6 text-3xl font-semibold leading-[0.98] tracking-[-0.04em] text-[var(--text-0)] md:text-5xl lg:text-6xl">
             The through-line is practical data work: learn the math, test it in code, then shape the result into something readable.
           </p>
         </div>
       </section>
-    </main>
+    </PageShell>
   )
 }
 
@@ -116,14 +117,6 @@ function CredentialCard({ item, priority }) {
         <p className="mt-6 text-xs uppercase tracking-[0.2em] text-[var(--text-2)] transition group-hover:text-[var(--text-1)]">Open</p>
       </div>
     </a>
-  )
-}
-
-function Tag({ children }) {
-  return (
-    <span className="rounded-full border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-3 py-1.5 text-xs uppercase tracking-[0.14em] text-[var(--text-2)]">
-      {children}
-    </span>
   )
 }
 

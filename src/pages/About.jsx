@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { aboutHighlights, profile, profileLinks, resumeLink } from '../Data/ProfileData.jsx'
+import { Eyebrow, PageShell } from '../components/ui.jsx'
 
 const statusItems = [
   { label: 'Current role', value: profile.role },
@@ -16,10 +17,10 @@ function About() {
   }
 
   return (
-    <main className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-10 md:py-24 lg:px-16">
+    <PageShell>
       <section className="grid gap-8 md:grid-cols-[1.04fr_0.96fr] md:items-end">
         <div>
-          <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">About / contact / signal</p>
+          <Eyebrow>About / contact / signal</Eyebrow>
           <h1 className="mt-6 text-[clamp(4rem,10vw,9rem)] font-semibold leading-[0.84] tracking-[-0.07em] text-[var(--text-0)]">
             Sidhant<br />Raj Khati
           </h1>
@@ -40,7 +41,7 @@ function About() {
       <section className="mt-16 grid gap-6 md:grid-cols-[0.86fr_1.14fr] md:gap-8" aria-label="About details and contact">
         <aside className="space-y-6">
           <section className="rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/76 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-7">
-            <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">Contact paths</p>
+            <Eyebrow className="tracking-[0.2em]">Contact paths</Eyebrow>
             <div className="mt-6 space-y-3">
               {profileLinks.map((link) => (
                 <a
@@ -61,7 +62,7 @@ function About() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--line-0)] bg-[linear-gradient(135deg,rgba(140,56,54,0.16),rgba(26,21,21,0.82)_48%,rgba(35,29,28,0.82))] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-7">
-            <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">Current focus</p>
+            <Eyebrow className="tracking-[0.2em]">Current focus</Eyebrow>
             <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.035em] text-[var(--text-0)]">{profile.focus}</p>
           </section>
 
@@ -71,7 +72,7 @@ function About() {
             rel="noreferrer"
             target="_blank"
           >
-            <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">{resumeLink.label}</p>
+            <Eyebrow className="tracking-[0.2em]">{resumeLink.label}</Eyebrow>
             <h2 className="mt-5 text-4xl font-semibold leading-[0.92] tracking-[-0.055em] text-[var(--text-0)] md:text-5xl">Open the formal record</h2>
             <div className="mt-6 flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[var(--bg-0)]/36 px-4 py-3 backdrop-blur-md">
               <span className="text-sm font-medium text-[var(--text-1)]">{resumeLink.value}</span>
@@ -94,7 +95,7 @@ function About() {
           <section className="rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/76 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-8" aria-labelledby="contact-form-title">
             <div className="grid gap-5 md:grid-cols-[0.8fr_1.2fr] md:items-start">
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">Contact form</p>
+                <Eyebrow className="tracking-[0.2em]">Contact form</Eyebrow>
                 <h2 className="mt-5 text-3xl font-semibold leading-none tracking-[-0.045em] text-[var(--text-0)] md:text-4xl" id="contact-form-title">Send a note</h2>
                 <p className="mt-4 text-sm leading-7 text-[var(--text-1)]">
                   This form is designed for a future backend service. For now, it confirms locally without publishing a direct email address.
@@ -142,7 +143,7 @@ function About() {
           </section>
         </div>
       </section>
-    </main>
+    </PageShell>
   )
 }
 

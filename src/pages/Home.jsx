@@ -1,10 +1,11 @@
 import mePoster from '../assets/me.jpg'
+import { Eyebrow, PageShell } from '../components/ui.jsx'
 
 function Home() {
   return (
-    <main className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-10 px-3 py-16 sm:px-4 md:grid-cols-[1fr_0.82fr] md:px-10 md:py-24 lg:px-16">
+    <PageShell className="grid min-h-[calc(100vh-4rem)] items-center gap-10 md:grid-cols-[1fr_0.82fr]">
       <section className="max-w-3xl">
-        <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">Data science / analytics / systems</p>
+        <Eyebrow>Data science / analytics / systems</Eyebrow>
         <h1
           aria-label="Sidhant Raj Khati"
           className="mt-6 max-w-[9.4ch] text-[clamp(4rem,12.5vw,9rem)] font-semibold leading-[0.86] tracking-[-0.055em] text-[var(--text-0)]"
@@ -41,7 +42,7 @@ function Home() {
           </figcaption>
         </figure>
       </aside>
-    </main>
+    </PageShell>
   )
 }
 

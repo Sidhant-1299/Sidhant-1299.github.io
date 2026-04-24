@@ -1,4 +1,5 @@
 import { projects } from '../Data/ProjectData.jsx'
+import { Eyebrow, PageShell } from '../components/ui.jsx'
 
 function createWorkSections(items) {
   const sections = []
@@ -33,9 +34,9 @@ function Work() {
   const sections = createWorkSections(projects)
 
   return (
-    <main className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-10 md:py-24 lg:px-16">
+    <PageShell>
       <section className="mx-auto min-h-[54vh] max-w-5xl text-center md:min-h-[62vh]">
-        <p className="text-xs uppercase tracking-[0.24em] text-[var(--text-2)]">Projects / systems / visual studies</p>
+        <Eyebrow className="tracking-[0.24em]">Projects / systems / visual studies</Eyebrow>
         <h1 className="mt-8 text-[clamp(4rem,12vw,11rem)] font-semibold leading-[0.82] tracking-[-0.065em] text-[var(--text-0)]">
           Recent<br />work
         </h1>
@@ -49,7 +50,7 @@ function Work() {
           <WorkSection key={`${section.variant}-${section.projects.map((project) => project.slug).join('-')}`} priority={index === 0} section={section} />
         ))}
       </section>
-    </main>
+    </PageShell>
   )
 }
 

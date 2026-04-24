@@ -1,5 +1,6 @@
 import { projects } from '../Data/ProjectData.jsx'
 import { getSkillLabels } from '../Data/SkillData.jsx'
+import { Eyebrow, PageShell, Tag } from '../components/ui.jsx'
 
 function ProjectDetail({ slug }) {
   const project = projects.find((item) => item.slug === slug)
@@ -14,14 +15,14 @@ function ProjectDetail({ slug }) {
   const sections = project.sections ?? []
 
   return (
-    <main className="mx-auto max-w-7xl px-3 py-14 sm:px-4 md:px-10 md:py-20 lg:px-16">
+    <PageShell spacing="compact">
       <a className="inline-flex min-h-11 items-center rounded-full border border-[var(--line-0)] bg-[var(--bg-1)]/70 px-4 text-sm text-[var(--text-1)] transition hover:border-[var(--line-1)] hover:text-[var(--text-0)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]" href="/work">
         Back to work
       </a>
 
       <section className="grid gap-10 pt-12 md:grid-cols-[0.92fr_1.08fr] md:items-end md:pt-16">
         <div>
-          <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">{project.client} / {project.year}</p>
+          <Eyebrow>{project.client} / {project.year}</Eyebrow>
           <h1 className="mt-5 text-[clamp(3.2rem,8vw,7.8rem)] font-semibold leading-[0.86] tracking-[-0.065em] text-[var(--text-0)]">
             {project.title}
           </h1>
@@ -30,9 +31,9 @@ function ProjectDetail({ slug }) {
           <p className="text-lg leading-8 text-[var(--text-1)]">{project.thesis ?? project.summary}</p>
           <div className="mt-6 flex flex-wrap gap-2">
             {tools.map((tool) => (
-              <span className="rounded-full border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-3 py-1.5 text-xs uppercase tracking-[0.14em] text-[var(--text-2)]" key={tool}>
+              <Tag key={tool}>
                 {tool}
-              </span>
+              </Tag>
             ))}
           </div>
         </div>
@@ -50,7 +51,7 @@ function ProjectDetail({ slug }) {
 
       <section className="mt-16 grid gap-8 md:grid-cols-[0.72fr_1.28fr] md:gap-12">
         <div>
-          <p className="sticky top-24 text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">Case notes</p>
+          <Eyebrow className="sticky top-24">Case notes</Eyebrow>
         </div>
         <div className="space-y-6">
           <article className="rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/72 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-8">
@@ -69,7 +70,7 @@ function ProjectDetail({ slug }) {
 
       <section className="mt-16 grid gap-4 border-t border-[var(--line-0)] pt-8 md:grid-cols-2 md:items-center">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">Next project</p>
+          <Eyebrow className="tracking-[0.2em]">Next project</Eyebrow>
           <a className="mt-3 inline-flex min-h-11 items-center text-3xl font-semibold tracking-[-0.04em] text-[var(--text-0)] transition hover:text-[var(--text-1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:text-4xl" href={`/projects/${nextProject.slug}`}>
             {nextProject.title}
           </a>
@@ -85,7 +86,7 @@ function ProjectDetail({ slug }) {
           </a>
         </div>
       </section>
-    </main>
+    </PageShell>
   )
 }
 
