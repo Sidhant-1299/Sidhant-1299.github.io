@@ -33,7 +33,7 @@ function Work() {
   const sections = createWorkSections(projects)
 
   return (
-    <main className="mx-auto max-w-7xl px-6 py-16 md:px-10 md:py-24 lg:px-16">
+    <main className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-10 md:py-24 lg:px-16">
       <section className="mx-auto min-h-[54vh] max-w-5xl text-center md:min-h-[62vh]">
         <p className="text-xs uppercase tracking-[0.24em] text-[var(--text-2)]">Projects / systems / visual studies</p>
         <h1 className="mt-8 text-[clamp(4rem,12vw,11rem)] font-semibold leading-[0.82] tracking-[-0.065em] text-[var(--text-0)]">

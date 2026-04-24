@@ -47,7 +47,7 @@ function App() {
     <div className="min-h-screen bg-[var(--bg-0)] text-[var(--text-0)] selection:bg-[var(--accent-red)]/40 selection:text-[var(--text-0)]">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(140,56,54,0.18),transparent_34rem),linear-gradient(180deg,rgba(35,29,28,0.72),transparent_24rem)]" />
       <header className="sticky top-0 z-50 border-b border-[var(--line-0)] bg-[var(--bg-0)]/72 backdrop-blur-xl">
-        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-10 lg:px-16" aria-label="Primary navigation">
+        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-3 sm:px-4 md:px-10 lg:px-16" aria-label="Primary navigation">
           <a
             className="rounded-full text-sm font-semibold tracking-tight text-[var(--text-0)] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]"
             href="/"
@@ -94,7 +94,7 @@ function App() {
 
 function RouteLoading() {
   return (
-    <main className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-center px-6 py-20 md:px-10 lg:px-16">
+    <main className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-center px-3 py-20 sm:px-4 md:px-10 lg:px-16">
       <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">Loading frame</p>
     </main>
   )
@@ -102,7 +102,7 @@ function RouteLoading() {
 
 function NotFound() {
   return (
-    <main className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-center px-6 py-20 md:px-10 lg:px-16">
+    <main className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-center px-3 py-20 sm:px-4 md:px-10 lg:px-16">
       <section className="max-w-xl rounded-3xl border border-[var(--line-0)] bg-[var(--bg-1)]/80 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
         <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">404</p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--text-0)]">This frame does not exist.</h1>

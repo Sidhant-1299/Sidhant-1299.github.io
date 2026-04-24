@@ -16,7 +16,7 @@ function About() {
   }
 
   return (
-    <main className="mx-auto max-w-7xl px-6 py-16 md:px-10 md:py-24 lg:px-16">
+    <main className="mx-auto max-w-7xl px-3 py-16 sm:px-4 md:px-10 md:py-24 lg:px-16">
       <section className="grid gap-8 md:grid-cols-[1.04fr_0.96fr] md:items-end">
         <div>
           <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">About / contact / signal</p>

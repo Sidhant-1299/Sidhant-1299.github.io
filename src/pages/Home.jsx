@@ -2,7 +2,7 @@ import mePoster from '../assets/me.jpg'
 
 function Home() {
   return (
-    <main className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-[1fr_0.82fr] md:px-10 md:py-24 lg:px-16">
+    <main className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-10 px-3 py-16 sm:px-4 md:grid-cols-[1fr_0.82fr] md:px-10 md:py-24 lg:px-16">
       <section className="max-w-3xl">
         <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">Data science / analytics / systems</p>
         <h1

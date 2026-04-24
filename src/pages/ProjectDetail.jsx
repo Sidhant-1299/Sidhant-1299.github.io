@@ -14,7 +14,7 @@ function ProjectDetail({ slug }) {
   const sections = project.sections ?? []
 
   return (
-    <main className="mx-auto max-w-7xl px-6 py-14 md:px-10 md:py-20 lg:px-16">
+    <main className="mx-auto max-w-7xl px-3 py-14 sm:px-4 md:px-10 md:py-20 lg:px-16">
       <a className="inline-flex min-h-11 items-center rounded-full border border-[var(--line-0)] bg-[var(--bg-1)]/70 px-4 text-sm text-[var(--text-1)] transition hover:border-[var(--line-1)] hover:text-[var(--text-0)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]" href="/work">
         Back to work
       </a>
@@ -100,7 +100,7 @@ function InfoCard({ label, value }) {
 
 function ProjectNotFound({ slug }) {
   return (
-    <main className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-center px-6 py-20 md:px-10 lg:px-16">
+    <main className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-center px-3 py-20 sm:px-4 md:px-10 lg:px-16">
       <section className="max-w-xl rounded-3xl border border-[var(--line-0)] bg-[var(--bg-1)]/80 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
         <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">Missing project</p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--text-0)]">{slug || 'Unknown'} is not in the project index.</h1>
