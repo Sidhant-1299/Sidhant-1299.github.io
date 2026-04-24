@@ -88,6 +88,9 @@
 - Work/Card Grid 2026-04-24: Desktop and 390px mobile checks passed for `/work`; project cards render once from `src/Data/ProjectData.jsx` with lead, paired, and asymmetric rows, with no console warnings/errors or horizontal overflow.
 - Work/Card Grid 2026-04-24: Project card links route to `/projects/[slug]` placeholders successfully. Detail template polish can wait for the Project Detail feature.
 - Work/Card Grid 2026-04-24: Card metadata/title panels are anchored consistently at the bottom of every project card to avoid image/text overlap.
+- Project Detail 2026-04-24: Desktop and 390px mobile checks passed for `/projects/semantic-book-recommender`, `/projects/kmeans-visualizer`, and a missing slug; no console warnings/errors or horizontal overflow.
+- Project Detail 2026-04-24: Detail pages read from `src/Data/ProjectData.jsx`, include hero image, metadata, case notes, external repository link when present, missing-slug fallback, and next-project navigation.
+- Project Detail 2026-04-24: Project skill/tool tags are sourced from `src/Data/SkillData.jsx`; case notes stay in `src/Data/ProjectData.jsx` because they are project-specific narrative.
 
 ## Change Strategy
 - Because the current app is tiny, prefer the smallest working change in `src/App.jsx` until a second page or genuinely reusable UI forces extraction.
