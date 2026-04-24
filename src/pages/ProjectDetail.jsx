@@ -70,7 +70,7 @@ function ProjectDetail({ slug }) {
       <section className="mt-16 grid gap-4 border-t border-[var(--line-0)] pt-8 md:grid-cols-2 md:items-center">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">Next project</p>
-          <a className="mt-3 block text-3xl font-semibold tracking-[-0.04em] text-[var(--text-0)] transition hover:text-[var(--text-1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:text-4xl" href={`/projects/${nextProject.slug}`}>
+          <a className="mt-3 inline-flex min-h-11 items-center text-3xl font-semibold tracking-[-0.04em] text-[var(--text-0)] transition hover:text-[var(--text-1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:text-4xl" href={`/projects/${nextProject.slug}`}>
             {nextProject.title}
           </a>
         </div>

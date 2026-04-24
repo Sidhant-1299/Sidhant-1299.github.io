@@ -25,7 +25,7 @@ function Home() {
       </section>
 
       <aside className="relative mx-auto w-full max-w-md md:max-w-none" aria-label="Portrait poster">
-        <div className="absolute -inset-6 rounded-[2rem] bg-[radial-gradient(circle_at_50%_20%,rgba(140,56,54,0.26),transparent_62%)] blur-2xl" />
+        <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_50%_20%,rgba(140,56,54,0.26),transparent_62%)] blur-2xl sm:-inset-6" />
         <figure className="relative overflow-hidden rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)] shadow-[0_28px_80px_rgba(0,0,0,0.45)]">
           <img
             alt="Sidhant Raj Khati seated in a warm low-light interior"
