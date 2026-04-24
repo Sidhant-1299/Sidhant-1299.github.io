@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import { aboutHighlights, profile, profileLinks, resumeLink } from '../Data/ProfileData.jsx'
 import { Eyebrow, PageShell } from '../components/ui.jsx'
 
@@ -9,11 +7,8 @@ const statusItems = [
 ]
 
 function About() {
-  const [formStatus, setFormStatus] = useState('')
-
   function handleSubmit(event) {
     event.preventDefault()
-    setFormStatus('Form backend is not wired yet. This is saved for the future contact service pattern.')
   }
 
   return (
@@ -40,6 +35,20 @@ function About() {
 
       <section className="mt-16 grid gap-6 md:grid-cols-[0.86fr_1.14fr] md:gap-8" aria-label="About details and contact">
         <aside className="space-y-6">
+          <a
+            className="group block overflow-hidden rounded-[2rem] border border-[var(--line-1)] bg-[radial-gradient(circle_at_20%_0%,rgba(234,226,215,0.14),transparent_16rem),linear-gradient(135deg,rgba(140,56,54,0.28),rgba(26,21,21,0.88)_50%,rgba(35,29,28,0.92))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.36)] outline-none transition duration-300 hover:-translate-y-1 active:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:p-7"
+            href={resumeLink.href}
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Eyebrow className="tracking-[0.2em]">{resumeLink.label}</Eyebrow>
+            <h2 className="mt-5 text-4xl font-semibold leading-[0.92] tracking-[-0.055em] text-[var(--text-0)] md:text-5xl">Open the formal record</h2>
+            <div className="mt-6 flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[var(--bg-0)]/36 px-4 py-3 backdrop-blur-md">
+              <span className="text-sm font-medium text-[var(--text-1)]">{resumeLink.value}</span>
+              <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)] transition group-hover:text-[var(--text-0)] group-active:text-[var(--text-0)]">Open</span>
+            </div>
+          </a>
+
           <section className="rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/76 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-7">
             <Eyebrow className="tracking-[0.2em]">Contact paths</Eyebrow>
             <div className="mt-6 space-y-3">
@@ -65,20 +74,6 @@ function About() {
             <Eyebrow className="tracking-[0.2em]">Current focus</Eyebrow>
             <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.035em] text-[var(--text-0)]">{profile.focus}</p>
           </section>
-
-          <a
-            className="group block overflow-hidden rounded-[2rem] border border-[var(--line-1)] bg-[radial-gradient(circle_at_20%_0%,rgba(234,226,215,0.14),transparent_16rem),linear-gradient(135deg,rgba(140,56,54,0.28),rgba(26,21,21,0.88)_50%,rgba(35,29,28,0.92))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.36)] outline-none transition duration-300 hover:-translate-y-1 active:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:p-7"
-            href={resumeLink.href}
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Eyebrow className="tracking-[0.2em]">{resumeLink.label}</Eyebrow>
-            <h2 className="mt-5 text-4xl font-semibold leading-[0.92] tracking-[-0.055em] text-[var(--text-0)] md:text-5xl">Open the formal record</h2>
-            <div className="mt-6 flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[var(--bg-0)]/36 px-4 py-3 backdrop-blur-md">
-              <span className="text-sm font-medium text-[var(--text-1)]">{resumeLink.value}</span>
-              <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)] transition group-hover:text-[var(--text-0)] group-active:text-[var(--text-0)]">Open</span>
-            </div>
-          </a>
         </aside>
 
         <div className="space-y-6">
@@ -93,50 +88,46 @@ function About() {
           </section>
 
           <section className="rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/76 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-8" aria-labelledby="contact-form-title">
-            <div className="grid gap-5 md:grid-cols-[0.8fr_1.2fr] md:items-start">
-              <div>
+            <div className="flex flex-col gap-6">
+              <div className="max-w-2xl">
                 <Eyebrow className="tracking-[0.2em]">Contact form</Eyebrow>
-                <h2 className="mt-5 text-3xl font-semibold leading-none tracking-[-0.045em] text-[var(--text-0)] md:text-4xl" id="contact-form-title">Send a note</h2>
-                <p className="mt-4 text-sm leading-7 text-[var(--text-1)]">
-                  This form is designed for a future backend service. For now, it confirms locally without publishing a direct email address.
-                </p>
+                <h2 className="mt-4 text-3xl font-semibold leading-none tracking-[-0.045em] text-[var(--text-0)] md:text-4xl" id="contact-form-title">Reach out</h2>
               </div>
 
-              <form className="space-y-4" onSubmit={handleSubmit}>
+              <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                 <label className="block" htmlFor="contact-name">
                   <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)]">Name</span>
+                  {/* Placeholder copy: Your name */}
                   <input
-                    className="mt-2 min-h-12 w-full rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-4 text-sm text-[var(--text-0)] outline-none transition placeholder:text-[var(--text-2)] focus:border-[var(--line-1)] focus:ring-2 focus:ring-[var(--accent-red)]/45"
+                    className="mt-2 min-h-14 w-full rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-4 text-base text-[var(--text-0)] outline-none transition focus:border-[var(--line-1)] focus:ring-2 focus:ring-[var(--accent-red)]/45"
                     id="contact-name"
                     name="name"
-                    placeholder="Your name"
                     type="text"
                   />
                 </label>
                 <label className="block" htmlFor="contact-email">
                   <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)]">Email</span>
+                  {/* Placeholder copy: you@example.com */}
                   <input
-                    className="mt-2 min-h-12 w-full rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-4 text-sm text-[var(--text-0)] outline-none transition placeholder:text-[var(--text-2)] focus:border-[var(--line-1)] focus:ring-2 focus:ring-[var(--accent-red)]/45"
+                    className="mt-2 min-h-14 w-full rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-4 text-base text-[var(--text-0)] outline-none transition focus:border-[var(--line-1)] focus:ring-2 focus:ring-[var(--accent-red)]/45"
                     id="contact-email"
                     name="email"
-                    placeholder="you@example.com"
                     type="email"
                   />
                 </label>
                 <label className="block" htmlFor="contact-message">
                   <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)]">Message</span>
+                  {/* Placeholder copy: Tell me what you are building or hiring for. */}
                   <textarea
-                    className="mt-2 min-h-36 w-full resize-y rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-4 py-3 text-sm leading-6 text-[var(--text-0)] outline-none transition placeholder:text-[var(--text-2)] focus:border-[var(--line-1)] focus:ring-2 focus:ring-[var(--accent-red)]/45"
+                    className="mt-2 min-h-[17rem] w-full resize-y rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-4 py-4 text-base leading-7 text-[var(--text-0)] outline-none transition focus:border-[var(--line-1)] focus:ring-2 focus:ring-[var(--accent-red)]/45"
                     id="contact-message"
                     name="message"
-                    placeholder="Tell me what you are building or hiring for."
                   />
                 </label>
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <button className="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--line-1)] bg-[var(--accent-red-deep)]/70 px-6 text-sm font-medium text-[var(--text-0)] transition hover:-translate-y-0.5 hover:bg-[var(--accent-red)]/55 active:-translate-y-0.5 active:bg-[var(--accent-red)]/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-1)]" type="submit">
+                  <button className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--line-1)] bg-[var(--accent-red-deep)]/70 px-8 text-sm font-medium text-[var(--text-0)] transition hover:-translate-y-0.5 hover:bg-[var(--accent-red)]/55 active:-translate-y-0.5 active:bg-[var(--accent-red)]/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-1)]" type="submit">
                     Send message
                   </button>
-                  {formStatus ? <p className="text-sm leading-6 text-[var(--text-1)]" role="status">{formStatus}</p> : null}
                 </div>
               </form>
             </div>
