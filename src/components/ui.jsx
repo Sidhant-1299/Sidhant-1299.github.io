@@ -5,6 +5,7 @@ function cx(...classes) {
 const shellSpacing = {
   default: 'px-3 py-16 sm:px-4 md:px-10 md:py-24 lg:px-16',
   compact: 'px-3 py-14 sm:px-4 md:px-10 md:py-20 lg:px-16',
+  home: 'px-3 py-14 sm:px-4 md:px-10 md:py-20 lg:px-16 lg:py-6 xl:py-8',
 }
 
 export function PageShell({ children, className, spacing = 'default' }) {

@@ -3,7 +3,7 @@ import { Eyebrow, PageShell } from '../components/ui.jsx'
 
 function Home() {
   return (
-    <PageShell className="grid min-h-[calc(100vh-4rem)] items-center gap-10 md:grid-cols-[1fr_0.82fr]">
+    <PageShell spacing="home" className="grid min-h-[calc(100vh-4rem)] items-center gap-10 md:grid-cols-[1fr_0.82fr] lg:h-[calc(100svh_-_4rem_-_1px)] lg:min-h-0 lg:gap-8 xl:gap-10">
       <section className="max-w-3xl">
         <Eyebrow>Data science / analytics / systems</Eyebrow>
         <h1
@@ -25,9 +25,9 @@ function Home() {
         </div>
       </section>
 
-      <aside className="relative mx-auto w-full max-w-md md:max-w-none" aria-label="Portrait poster">
+      <aside className="relative mx-auto w-full max-w-md md:max-w-none lg:flex lg:max-h-full lg:items-center" aria-label="Portrait poster">
         <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_50%_20%,rgba(140,56,54,0.26),transparent_62%)] blur-2xl sm:-inset-6" />
-        <figure className="relative overflow-hidden rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)] shadow-[0_28px_80px_rgba(0,0,0,0.45)]">
+        <figure className="relative w-full overflow-hidden rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)] shadow-[0_28px_80px_rgba(0,0,0,0.45)] lg:h-[calc(100svh-8rem)] lg:max-h-[37rem]">
           <img
             alt="Sidhant Raj Khati seated in a warm low-light interior"
             className="aspect-[4/5] h-full w-full object-cover saturate-[0.85]"
@@ -37,8 +37,8 @@ function Home() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_48%,rgba(18,16,16,0.72))]" />
           <figcaption className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl border border-white/10 bg-[var(--bg-0)]/50 px-4 py-3 text-xs uppercase tracking-[0.18em] text-[var(--text-1)] backdrop-blur-md">
-            <span>Poster Study</span>
-            <span>01</span>
+            <span>Data + Agents</span>
+            <span>Toronto</span>
           </figcaption>
         </figure>
       </aside>

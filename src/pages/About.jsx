@@ -36,7 +36,7 @@ function About() {
       <section className="mt-16 grid gap-6 md:grid-cols-[0.86fr_1.14fr] md:gap-8" aria-label="About details and contact">
         <aside className="space-y-6">
           <a
-            className="group block overflow-hidden rounded-[2rem] border border-[var(--line-1)] bg-[radial-gradient(circle_at_20%_0%,rgba(234,226,215,0.14),transparent_16rem),linear-gradient(135deg,rgba(140,56,54,0.28),rgba(26,21,21,0.88)_50%,rgba(35,29,28,0.92))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.36)] outline-none transition duration-300 hover:-translate-y-1 active:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:p-7"
+            className="resume-attention group block overflow-hidden rounded-[2rem] border border-[var(--line-1)] bg-[radial-gradient(circle_at_20%_0%,rgba(234,226,215,0.14),transparent_16rem),linear-gradient(135deg,rgba(140,56,54,0.28),rgba(26,21,21,0.88)_50%,rgba(35,29,28,0.92))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.36)] outline-none transition duration-300 hover:-translate-y-1 active:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:p-7"
             href={resumeLink.href}
             rel="noreferrer"
             target="_blank"

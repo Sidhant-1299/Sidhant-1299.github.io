@@ -92,6 +92,10 @@ a {
   animation-name: route-exit-back;
 }
 
+.resume-attention {
+  animation: resume-attention-bounce 920ms cubic-bezier(0.22, 1, 0.36, 1) 180ms 2;
+}
+
 @keyframes route-enter-forward {
   from {
     opacity: 0;
@@ -148,6 +152,25 @@ a {
   }
 }
 
+@keyframes resume-attention-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  34% {
+    transform: translateY(-0.45rem);
+  }
+
+  58% {
+    transform: translateY(0.12rem);
+  }
+
+  78% {
+    transform: translateY(-0.18rem);
+  }
+}
+
 button,
 a {
   -webkit-tap-highlight-color: transparent;
@@ -170,6 +193,10 @@ a {
 
   .nav-active-pill {
     transition-duration: 0.01ms !important;
+  }
+
+  .resume-attention {
+    animation: none !important;
   }
 }
 
