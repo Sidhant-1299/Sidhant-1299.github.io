@@ -85,6 +85,9 @@
 - Separate blocking fixes from optional polish.
 - Shell/Lazy Routes 2026-04-24: Desktop and 390px mobile route checks passed for `/`, `/work`, `/academic`, `/about`, and `/projects/sample-study`; no console warnings/errors and no mobile horizontal overflow.
 - Shell/Lazy Routes 2026-04-24: `/archive` is intentionally absent from nav and resolves to the generic not-found frame. Keep this behavior unless the route contract changes.
+- Work/Card Grid 2026-04-24: Desktop and 390px mobile checks passed for `/work`; project cards render once from `src/Data/ProjectData.jsx` with lead, paired, and asymmetric rows, with no console warnings/errors or horizontal overflow.
+- Work/Card Grid 2026-04-24: Project card links route to `/projects/[slug]` placeholders successfully. Detail template polish can wait for the Project Detail feature.
+- Work/Card Grid 2026-04-24: Card metadata/title panels are anchored consistently at the bottom of every project card to avoid image/text overlap.
 
 ## Change Strategy
 - Because the current app is tiny, prefer the smallest working change in `src/App.jsx` until a second page or genuinely reusable UI forces extraction.
