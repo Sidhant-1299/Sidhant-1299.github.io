@@ -1,1 +1,66 @@
 @import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg-0: #121010;
+  --bg-1: #1a1515;
+  --bg-2: #231d1c;
+  --text-0: #f3eee7;
+  --text-1: #c9bfb2;
+  --text-2: #93897b;
+  --line-0: #2d2625;
+  --line-1: #413736;
+  --stone: #6b6257;
+  --fog: #918877;
+  --sand: #a79b8e;
+  --tobacco: #5c4a33;
+  --clay: #867766;
+  --accent-red: #8c3836;
+  --accent-red-deep: #4d2c24;
+  --accent-blue: #2e4a5a;
+  --accent-ivory: #eae2d7;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg-0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg-0);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(140, 56, 54, 0.16), transparent 36rem),
+    var(--bg-0);
+  color: var(--text-0);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
