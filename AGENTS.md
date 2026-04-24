@@ -38,6 +38,13 @@
 - For focused lint on touched files, use `npx eslint path/to/file`.
 - Current baseline may include user or legacy-data changes. Separate pre-existing worktree/lint issues from failures introduced by the current feature.
 
+## Deployment Notes
+- Read `DEPLOYMENT.md` before deployment, hosting, workflow, or Vite base-path changes.
+- GitHub Pages is the likely first target, but the repo is not actively deployed yet.
+- Keep Vite `base` as `/` unless the hosting target changes to a project-subpath deployment.
+- Preserve SPA fallback behavior for direct visits to `/work`, `/academic`, `/about`, and `/projects/[slug]`.
+- For GitHub Pages, keep the deploy workflow copying `dist/index.html` to `dist/404.html` unless another fallback strategy replaces it.
+
 ## Legacy Data Gotchas
 - `src/Data/*` is not wired into the current `App.jsx`; treat it as dormant content, not proven infrastructure.
 - Prefer replacing or dropping stale legacy data over adding compatibility code. Keep legacy modules only when they directly serve the current feature.

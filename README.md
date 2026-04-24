@@ -1,18 +1,49 @@
-# React + Vite
+# Sidhant Raj Khati
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I'm a Data Science student in Toronto exploring machine learning, LLMs, and agentic AI.
 
-Currently, two official plugins are available:
+I build data and machine learning projects with a growing focus on LLMs, agentic workflows, and the way recent model capabilities can change how software gets designed and operated.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Current Focus
 
-## React Compiler
+I'm currently shifting deeper into agentic AI: tool-using systems, retrieval, evaluation, workflow automation, and the practical questions around making LLM behavior reliable.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+I do not have a shipped agentic project yet, but this is where my current attention is going. My existing work is grounded in semantic search, sentiment analysis, clustering visualizers, regression systems, and machine learning foundations.
 
-Note: This will impact Vite dev & build performances.
+## Featured Work
 
-## Expanding the ESLint configuration
+- [Semantic Book Recommender](https://github.com/Sidhant-1299/Semantic-Book-Recommender)  
+  An interactive recommendation system that maps books by meaning, mood, and reader intent.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [YouTube Sentiment Analyzer](https://github.com/Sidhant-1299/Youtube-Sentiment-Analysis)  
+  A comment analysis tool for reading viewer sentiment directly inside the YouTube workflow.
+
+- [MLR C++](https://github.com/Sidhant-1299/mlr_cpp)  
+  A fast multiple linear regression library with a Python-facing API and C++ core.
+
+- [Exoplanet Exploration EDA](https://github.com/Sidhant-1299/Exoplanet-Exploration)  
+  Exploratory analysis of discovered exoplanets to surface patterns across orbital and physical properties.
+
+- [Interactive K-Means Visualizer](https://github.com/Sidhant-1299/Kmeans_interactive_visualizer)  
+  A visual interface for learning how clustering changes as centroids move and assignments update.
+
+## Academic
+
+- Honours Bachelor of Data Science and Analytics, Seneca Polytechnic, Sep 2023 - Aug 2027
+- Google Advanced Data Analytics Certificate, issued Nov 2024
+- High School, Physics, St. Xavier's College, Maitighar
+
+## Skills
+
+- Languages: Python, JavaScript, C++
+- Machine Learning: NLP, embeddings, regression, classification, K-Means, perceptron
+- Data: Pandas, EDA, visualization
+- Interfaces: Streamlit, Gradio, Chrome extensions, interactive UI
+- Systems and tools: APIs, Git, GitHub, Jupyter, Numpy, PyTorch
+
+## Links
+
+- [GitHub](https://github.com/Sidhant-1299/)
+- [LinkedIn](https://www.linkedin.com/in/sidhant-raj-khati-728086245/)
+- [Twitter / X](https://x.com/SidhantKhati)
+- [Resume](https://docs.google.com/document/d/1fqO7Bz8Lt9trG2gnx5r9Z51ZJCENFCqUPhajD6nqBbo/edit?usp=sharing)
