@@ -90,7 +90,7 @@ function Academic() {
 function CredentialCard({ item, priority }) {
   return (
     <a
-      className="group grid overflow-hidden rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/80 shadow-[0_20px_70px_rgba(0,0,0,0.34)] outline-none transition duration-300 hover:-translate-y-1 hover:border-[var(--line-1)] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] sm:grid-cols-[13rem_1fr]"
+      className="group grid overflow-hidden rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/80 shadow-[0_20px_70px_rgba(0,0,0,0.34)] outline-none transition duration-300 hover:-translate-y-1 hover:border-[var(--line-1)] active:-translate-y-0.5 active:border-[var(--line-1)] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] sm:grid-cols-[13rem_1fr]"
       href={item.url}
       rel="noreferrer"
       target="_blank"
@@ -98,7 +98,7 @@ function CredentialCard({ item, priority }) {
       <div className="relative min-h-52 overflow-hidden bg-[var(--bg-2)] sm:min-h-full">
         <img
           alt=""
-          className="h-full w-full object-contain p-8 opacity-90 saturate-[0.84] transition duration-500 group-hover:scale-[1.04] group-hover:opacity-100"
+          className="h-full w-full object-contain p-8 opacity-90 saturate-[0.84] transition duration-500 group-hover:scale-[1.04] group-hover:opacity-100 group-active:scale-[1.025] group-active:opacity-100"
           decoding="async"
           loading={priority ? 'eager' : 'lazy'}
           src={item.img}
@@ -114,7 +114,7 @@ function CredentialCard({ item, priority }) {
         <h2 className="mt-5 text-3xl font-semibold leading-none tracking-[-0.045em] text-[var(--text-0)] md:text-4xl">{item.name}</h2>
         <p className="mt-4 text-base leading-7 text-[var(--text-1)]">{item.course}</p>
         <p className="mt-4 text-sm leading-6 text-[var(--text-2)]">{item.summary}</p>
-        <p className="mt-6 text-xs uppercase tracking-[0.2em] text-[var(--text-2)] transition group-hover:text-[var(--text-1)]">Open</p>
+        <p className="mt-6 text-xs uppercase tracking-[0.2em] text-[var(--text-2)] transition group-hover:text-[var(--text-1)] group-active:text-[var(--text-1)]">Open</p>
       </div>
     </a>
   )

@@ -45,7 +45,7 @@ function About() {
             <div className="mt-6 space-y-3">
               {profileLinks.map((link) => (
                 <a
-                  className="group flex min-h-14 items-center justify-between gap-4 rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/45 px-4 py-3 outline-none transition duration-300 hover:-translate-y-0.5 hover:border-[var(--line-1)] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-1)]"
+                  className="group flex min-h-14 items-center justify-between gap-4 rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/45 px-4 py-3 outline-none transition duration-300 hover:-translate-y-0.5 hover:border-[var(--line-1)] active:-translate-y-0.5 active:border-[var(--line-1)] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-1)]"
                   href={link.href}
                   key={link.label}
                   rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
@@ -55,7 +55,7 @@ function About() {
                     <span className="block text-xs uppercase tracking-[0.18em] text-[var(--text-2)]">{link.label}</span>
                     <span className="mt-1 block text-sm font-medium text-[var(--text-0)]">{link.value}</span>
                   </span>
-                  <span className="text-sm text-[var(--text-2)] transition group-hover:text-[var(--text-0)]" aria-hidden="true">Open</span>
+                  <span className="text-sm text-[var(--text-2)] transition group-hover:text-[var(--text-0)] group-active:text-[var(--text-0)]" aria-hidden="true">Open</span>
                 </a>
               ))}
             </div>
@@ -67,7 +67,7 @@ function About() {
           </section>
 
           <a
-            className="group block overflow-hidden rounded-[2rem] border border-[var(--line-1)] bg-[radial-gradient(circle_at_20%_0%,rgba(234,226,215,0.14),transparent_16rem),linear-gradient(135deg,rgba(140,56,54,0.28),rgba(26,21,21,0.88)_50%,rgba(35,29,28,0.92))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.36)] outline-none transition duration-300 hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:p-7"
+            className="group block overflow-hidden rounded-[2rem] border border-[var(--line-1)] bg-[radial-gradient(circle_at_20%_0%,rgba(234,226,215,0.14),transparent_16rem),linear-gradient(135deg,rgba(140,56,54,0.28),rgba(26,21,21,0.88)_50%,rgba(35,29,28,0.92))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.36)] outline-none transition duration-300 hover:-translate-y-1 active:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:p-7"
             href={resumeLink.href}
             rel="noreferrer"
             target="_blank"
@@ -76,7 +76,7 @@ function About() {
             <h2 className="mt-5 text-4xl font-semibold leading-[0.92] tracking-[-0.055em] text-[var(--text-0)] md:text-5xl">Open the formal record</h2>
             <div className="mt-6 flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[var(--bg-0)]/36 px-4 py-3 backdrop-blur-md">
               <span className="text-sm font-medium text-[var(--text-1)]">{resumeLink.value}</span>
-              <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)] transition group-hover:text-[var(--text-0)]">Open</span>
+              <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)] transition group-hover:text-[var(--text-0)] group-active:text-[var(--text-0)]">Open</span>
             </div>
           </a>
         </aside>
@@ -133,7 +133,7 @@ function About() {
                   />
                 </label>
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                  <button className="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--line-1)] bg-[var(--accent-red-deep)]/70 px-6 text-sm font-medium text-[var(--text-0)] transition hover:-translate-y-0.5 hover:bg-[var(--accent-red)]/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-1)]" type="submit">
+                  <button className="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--line-1)] bg-[var(--accent-red-deep)]/70 px-6 text-sm font-medium text-[var(--text-0)] transition hover:-translate-y-0.5 hover:bg-[var(--accent-red)]/55 active:-translate-y-0.5 active:bg-[var(--accent-red)]/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-1)]" type="submit">
                     Send message
                   </button>
                   {formStatus ? <p className="text-sm leading-6 text-[var(--text-1)]" role="status">{formStatus}</p> : null}

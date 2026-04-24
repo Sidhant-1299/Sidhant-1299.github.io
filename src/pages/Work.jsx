@@ -92,12 +92,12 @@ function ProjectCard({ project, size, priority = false }) {
 
   return (
     <a
-      className={`group relative flex overflow-hidden rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)] shadow-[0_24px_70px_rgba(0,0,0,0.36)] outline-none transition duration-300 hover:-translate-y-1 hover:border-[var(--line-1)] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] ${sizeClass}`}
+      className={`group relative flex overflow-hidden rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)] shadow-[0_24px_70px_rgba(0,0,0,0.36)] outline-none transition duration-300 hover:-translate-y-1 hover:border-[var(--line-1)] active:-translate-y-0.5 active:border-[var(--line-1)] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] ${sizeClass}`}
       href={`/projects/${project.slug}`}
     >
       <img
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-86 saturate-[0.82] transition duration-500 group-hover:scale-[1.035] group-hover:opacity-100"
+        className="absolute inset-0 h-full w-full object-cover opacity-86 saturate-[0.82] transition duration-500 group-hover:scale-[1.035] group-hover:opacity-100 group-active:scale-[1.025] group-active:opacity-100"
         decoding="async"
         loading={priority ? 'eager' : 'lazy'}
         src={project.image}
@@ -105,7 +105,7 @@ function ProjectCard({ project, size, priority = false }) {
       <div className="absolute inset-0 bg-gradient-to-b from-[#120f0f]/10 via-[#120f0f]/25 to-[#120f0f]/92" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(234,226,215,0.10),transparent_26rem)] opacity-70" />
       <div className="absolute inset-0 z-10 flex items-end p-4 text-[var(--text-0)] md:p-6">
-        <div className="w-full translate-y-1 rounded-[1.6rem] border border-white/10 bg-[var(--bg-0)]/62 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.32)] backdrop-blur-md transition duration-300 group-hover:translate-y-0 md:p-5">
+        <div className="w-full translate-y-1 rounded-[1.6rem] border border-white/10 bg-[var(--bg-0)]/62 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.32)] backdrop-blur-md transition duration-300 group-hover:translate-y-0 group-active:translate-y-0 md:p-5">
           <div className="mb-3 flex items-center justify-between gap-4 text-[0.68rem] uppercase tracking-[0.18em] text-[var(--text-2)]">
             <span>{project.client}</span>
             <span>{project.year}</span>

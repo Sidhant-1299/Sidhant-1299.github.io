@@ -16,7 +16,7 @@ function ProjectDetail({ slug }) {
 
   return (
     <PageShell spacing="compact">
-      <a className="inline-flex min-h-11 items-center rounded-full border border-[var(--line-0)] bg-[var(--bg-1)]/70 px-4 text-sm text-[var(--text-1)] transition hover:border-[var(--line-1)] hover:text-[var(--text-0)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]" href="/work">
+      <a className="inline-flex min-h-11 items-center rounded-full border border-[var(--line-0)] bg-[var(--bg-1)]/70 px-4 text-sm text-[var(--text-1)] transition hover:border-[var(--line-1)] hover:text-[var(--text-0)] active:border-[var(--line-1)] active:text-[var(--text-0)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]" href="/work">
         Back to work
       </a>
 
@@ -71,17 +71,17 @@ function ProjectDetail({ slug }) {
       <section className="mt-16 grid gap-4 border-t border-[var(--line-0)] pt-8 md:grid-cols-2 md:items-center">
         <div>
           <Eyebrow className="tracking-[0.2em]">Next project</Eyebrow>
-          <a className="mt-3 inline-flex min-h-11 items-center text-3xl font-semibold tracking-[-0.04em] text-[var(--text-0)] transition hover:text-[var(--text-1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:text-4xl" href={`/projects/${nextProject.slug}`}>
+          <a className="mt-3 inline-flex min-h-11 items-center text-3xl font-semibold tracking-[-0.04em] text-[var(--text-0)] transition hover:text-[var(--text-1)] active:text-[var(--text-1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:text-4xl" href={`/projects/${nextProject.slug}`}>
             {nextProject.title}
           </a>
         </div>
         <div className="flex flex-wrap gap-3 md:justify-end">
           {project.url ? (
-            <a className="inline-flex min-h-11 items-center rounded-full border border-[var(--line-1)] bg-[var(--bg-2)]/70 px-5 text-sm font-medium text-[var(--text-0)] transition hover:-translate-y-0.5 hover:bg-[var(--bg-2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]" href={project.url} rel="noreferrer" target="_blank">
+            <a className="inline-flex min-h-11 items-center rounded-full border border-[var(--line-1)] bg-[var(--bg-2)]/70 px-5 text-sm font-medium text-[var(--text-0)] transition hover:-translate-y-0.5 hover:bg-[var(--bg-2)] active:-translate-y-0.5 active:bg-[var(--bg-2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]" href={project.url} rel="noreferrer" target="_blank">
               Open repository
             </a>
           ) : null}
-          <a className="inline-flex min-h-11 items-center rounded-full border border-[var(--line-0)] px-5 text-sm font-medium text-[var(--text-1)] transition hover:-translate-y-0.5 hover:border-[var(--line-1)] hover:text-[var(--text-0)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]" href="/work">
+          <a className="inline-flex min-h-11 items-center rounded-full border border-[var(--line-0)] px-5 text-sm font-medium text-[var(--text-1)] transition hover:-translate-y-0.5 hover:border-[var(--line-1)] hover:text-[var(--text-0)] active:-translate-y-0.5 active:border-[var(--line-1)] active:text-[var(--text-0)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]" href="/work">
             All work
           </a>
         </div>
@@ -106,7 +106,7 @@ function ProjectNotFound({ slug }) {
         <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">Missing project</p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--text-0)]">{slug || 'Unknown'} is not in the project index.</h1>
         <p className="mt-4 leading-7 text-[var(--text-1)]">Add this slug to `src/Data/ProjectData.jsx` or return to the work page.</p>
-        <a className="mt-6 inline-flex min-h-11 items-center rounded-full border border-[var(--line-0)] px-5 text-sm font-medium text-[var(--text-1)] transition hover:border-[var(--line-1)] hover:text-[var(--text-0)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]" href="/work">
+        <a className="mt-6 inline-flex min-h-11 items-center rounded-full border border-[var(--line-0)] px-5 text-sm font-medium text-[var(--text-1)] transition hover:border-[var(--line-1)] hover:text-[var(--text-0)] active:border-[var(--line-1)] active:text-[var(--text-0)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)]" href="/work">
           Back to work
         </a>
       </section>
