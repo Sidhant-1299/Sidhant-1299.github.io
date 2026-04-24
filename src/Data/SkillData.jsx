@@ -13,11 +13,13 @@ export const skills = [
   { id: 'eda', label: 'EDA', group: 'Data' },
   { id: 'visualization', label: 'Visualization', group: 'Data' },
   { id: 'streamlit', label: 'Streamlit', group: 'Interface' },
-  {id: 'gradio', label: 'Gradio', group: 'Interface'},
+  { id: 'gradio', label: 'Gradio', group: 'Interface' },
   { id: 'chrome-extension', label: 'Chrome Extension', group: 'Interface' },
   { id: 'interactive-ui', label: 'Interactive UI', group: 'Interface' },
   { id: 'apis', label: 'APIs', group: 'Systems' },
 ]
+
+export const tools = ['Git', 'GitHub', 'Jupyter', 'Numpy', 'PyTorch', ]
 
 const skillById = new Map(skills.map((skill) => [skill.id, skill]))
 
