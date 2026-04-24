@@ -1,14 +1,146 @@
+import { useState } from 'react'
+
+import { aboutHighlights, profile, profileLinks, resumeLink } from '../Data/ProfileData.jsx'
+
+const statusItems = [
+  { label: 'Current role', value: profile.role },
+  { label: 'Based in', value: profile.location },
+]
+
 function About() {
+  const [formStatus, setFormStatus] = useState('')
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    setFormStatus('Form backend is not wired yet. This is saved for the future contact service pattern.')
+  }
+
   return (
-    <main className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28 lg:px-16">
-      <section className="max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">About</p>
-        <h1 className="mt-5 text-4xl font-semibold tracking-[-0.05em] text-[var(--text-0)] md:text-6xl">
-          A data science and analytics student shaping technical work with calm visual structure.
-        </h1>
-        <p className="mt-8 max-w-2xl text-base leading-7 text-[var(--text-1)] md:text-lg md:leading-8">
-          The full about page will add contact paths, current focus, and credibility without becoming a resume dump.
-        </p>
+    <main className="mx-auto max-w-7xl px-6 py-16 md:px-10 md:py-24 lg:px-16">
+      <section className="grid gap-8 md:grid-cols-[1.04fr_0.96fr] md:items-end">
+        <div>
+          <p className="text-xs uppercase tracking-[0.22em] text-[var(--text-2)]">About / contact / signal</p>
+          <h1 className="mt-6 text-[clamp(4rem,10vw,9rem)] font-semibold leading-[0.84] tracking-[-0.07em] text-[var(--text-0)]">
+            Sidhant<br />Raj Khati
+          </h1>
+        </div>
+        <div className="rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/76 p-5 shadow-[0_18px_60px_rgba(0,0,0,0.32)] md:p-6">
+          <p className="text-lg leading-8 text-[var(--text-1)]">{profile.intro}</p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            {statusItems.map((item) => (
+              <div className="rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/45 p-4" key={item.label}>
+                <p className="text-[0.68rem] uppercase tracking-[0.18em] text-[var(--text-2)]">{item.label}</p>
+                <p className="mt-2 text-sm font-medium leading-5 text-[var(--text-0)]">{item.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-16 grid gap-6 md:grid-cols-[0.86fr_1.14fr] md:gap-8" aria-label="About details and contact">
+        <aside className="space-y-6">
+          <section className="rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/76 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-7">
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">Contact paths</p>
+            <div className="mt-6 space-y-3">
+              {profileLinks.map((link) => (
+                <a
+                  className="group flex min-h-14 items-center justify-between gap-4 rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/45 px-4 py-3 outline-none transition duration-300 hover:-translate-y-0.5 hover:border-[var(--line-1)] focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-1)]"
+                  href={link.href}
+                  key={link.label}
+                  rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+                  target={link.href.startsWith('http') ? '_blank' : undefined}
+                >
+                  <span>
+                    <span className="block text-xs uppercase tracking-[0.18em] text-[var(--text-2)]">{link.label}</span>
+                    <span className="mt-1 block text-sm font-medium text-[var(--text-0)]">{link.value}</span>
+                  </span>
+                  <span className="text-sm text-[var(--text-2)] transition group-hover:text-[var(--text-0)]" aria-hidden="true">Open</span>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <section className="rounded-[2rem] border border-[var(--line-0)] bg-[linear-gradient(135deg,rgba(140,56,54,0.16),rgba(26,21,21,0.82)_48%,rgba(35,29,28,0.82))] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-7">
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">Current focus</p>
+            <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.035em] text-[var(--text-0)]">{profile.focus}</p>
+          </section>
+
+          <a
+            className="group block overflow-hidden rounded-[2rem] border border-[var(--line-1)] bg-[radial-gradient(circle_at_20%_0%,rgba(234,226,215,0.14),transparent_16rem),linear-gradient(135deg,rgba(140,56,54,0.28),rgba(26,21,21,0.88)_50%,rgba(35,29,28,0.92))] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.36)] outline-none transition duration-300 hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-0)] md:p-7"
+            href={resumeLink.href}
+            rel="noreferrer"
+            target="_blank"
+          >
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">{resumeLink.label}</p>
+            <h2 className="mt-5 text-4xl font-semibold leading-[0.92] tracking-[-0.055em] text-[var(--text-0)] md:text-5xl">Open the formal record</h2>
+            <div className="mt-6 flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[var(--bg-0)]/36 px-4 py-3 backdrop-blur-md">
+              <span className="text-sm font-medium text-[var(--text-1)]">{resumeLink.value}</span>
+              <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)] transition group-hover:text-[var(--text-0)]">Open</span>
+            </div>
+          </a>
+        </aside>
+
+        <div className="space-y-6">
+          <section className="grid gap-6 lg:grid-cols-3" aria-label="Credibility highlights">
+            {aboutHighlights.map((item) => (
+              <article className="rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/72 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)]" key={item.label}>
+                <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">{item.label}</p>
+                <h2 className="mt-5 text-2xl font-semibold leading-none tracking-[-0.04em] text-[var(--text-0)]">{item.title}</h2>
+                <p className="mt-4 text-sm leading-7 text-[var(--text-1)]">{item.body}</p>
+              </article>
+            ))}
+          </section>
+
+          <section className="rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/76 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.28)] md:p-8" aria-labelledby="contact-form-title">
+            <div className="grid gap-5 md:grid-cols-[0.8fr_1.2fr] md:items-start">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-2)]">Contact form</p>
+                <h2 className="mt-5 text-3xl font-semibold leading-none tracking-[-0.045em] text-[var(--text-0)] md:text-4xl" id="contact-form-title">Send a note</h2>
+                <p className="mt-4 text-sm leading-7 text-[var(--text-1)]">
+                  This form is designed for a future backend service. For now, it confirms locally without publishing a direct email address.
+                </p>
+              </div>
+
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <label className="block" htmlFor="contact-name">
+                  <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)]">Name</span>
+                  <input
+                    className="mt-2 min-h-12 w-full rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-4 text-sm text-[var(--text-0)] outline-none transition placeholder:text-[var(--text-2)] focus:border-[var(--line-1)] focus:ring-2 focus:ring-[var(--accent-red)]/45"
+                    id="contact-name"
+                    name="name"
+                    placeholder="Your name"
+                    type="text"
+                  />
+                </label>
+                <label className="block" htmlFor="contact-email">
+                  <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)]">Email</span>
+                  <input
+                    className="mt-2 min-h-12 w-full rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-4 text-sm text-[var(--text-0)] outline-none transition placeholder:text-[var(--text-2)] focus:border-[var(--line-1)] focus:ring-2 focus:ring-[var(--accent-red)]/45"
+                    id="contact-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    type="email"
+                  />
+                </label>
+                <label className="block" htmlFor="contact-message">
+                  <span className="text-xs uppercase tracking-[0.18em] text-[var(--text-2)]">Message</span>
+                  <textarea
+                    className="mt-2 min-h-36 w-full resize-y rounded-2xl border border-[var(--line-0)] bg-[var(--bg-2)]/70 px-4 py-3 text-sm leading-6 text-[var(--text-0)] outline-none transition placeholder:text-[var(--text-2)] focus:border-[var(--line-1)] focus:ring-2 focus:ring-[var(--accent-red)]/45"
+                    id="contact-message"
+                    name="message"
+                    placeholder="Tell me what you are building or hiring for."
+                  />
+                </label>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <button className="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--line-1)] bg-[var(--accent-red-deep)]/70 px-6 text-sm font-medium text-[var(--text-0)] transition hover:-translate-y-0.5 hover:bg-[var(--accent-red)]/55 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-red)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-1)]" type="submit">
+                    Send message
+                  </button>
+                  {formStatus ? <p className="text-sm leading-6 text-[var(--text-1)]" role="status">{formStatus}</p> : null}
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
       </section>
     </main>
   )

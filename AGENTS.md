@@ -93,6 +93,8 @@
 - Project Detail 2026-04-24: Project skill/tool tags are sourced from `src/Data/SkillData.jsx`; case notes stay in `src/Data/ProjectData.jsx` because they are project-specific narrative.
 - Academic Page 2026-04-24: Desktop and 390px mobile checks passed for `/academic`; no console warnings/errors and no mobile horizontal overflow.
 - Academic Page 2026-04-24: Academic credentials now use `src/Data/AcademicData.jsx` with verified `src/assets/Academic/` imports, while skills/tools reuse `src/Data/SkillData.jsx`.
+- About Page 2026-04-24: Desktop and 390px mobile checks passed for `/about`; no console warnings/errors and no mobile horizontal overflow.
+- About Page 2026-04-24: Profile/contact content now lives in `src/Data/ProfileData.jsx`; `/about` includes GitHub, LinkedIn, Twitter/X, resume, credibility blocks, and a no-backend contact form with local status feedback. Do not publish a direct personal email on the page.
 
 ## Change Strategy
 - Because the current app is tiny, prefer the smallest working change in `src/App.jsx` until a second page or genuinely reusable UI forces extraction.
