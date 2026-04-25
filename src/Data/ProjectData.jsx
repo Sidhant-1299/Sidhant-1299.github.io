@@ -4,8 +4,31 @@ import mlrRegression from '../assets/Projects/MLR_regression.png'
 import perceptron from '../assets/Projects/perceptron.png'
 import semanticBook from '../assets/Projects/semantic_book_recommender.png'
 import youtubeSentiment from '../assets/Projects/youtube_sentiment_analyzer.png'
+import SQLDataWarehouse from '../assets/Projects/sql_data_warehouse.png'
 
 export const projects = [
+  {
+    slug: 'SQL-data-warehouse',
+    title: 'SQL Data Warehouse',
+    client: 'Data Engineering',
+    year: '2026',
+    image: SQLDataWarehouse,
+    summary: 'Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.',
+    url: 'https://github.com/Sidhant-1299/SQL-Warehouse-Project',
+    role: 'Data Loading, Data Cleaning, Normalization and providing detail Insights with well developed documentation',
+    skillIds: ['sql'],
+    thesis: 'Developed a modern data warehouse using Postgresql Server to consolidate sales data, enabling analytical reporting and informed decision-making.',
+    sections: [
+      {
+        heading: 'Architecture Design',
+        body: 'SQL Server data warehouse using medallion architecture (Bronze, Silver, Gold), ingesting CRM and ERP source data via stored procedures with data transformations. ',
+      },
+      {
+        heading: 'Detailed Insights',
+        body: 'The Gold layer with customer and product dimensions and a fact sales table, supported by a data catalog and documented data flow diagrams provides detailed insights for informed decision making.',
+      },
+    ],
+  },
   {
     slug: 'semantic-book-recommender',
     title: 'Semantic Book Recommender',
@@ -54,7 +77,7 @@ export const projects = [
     slug: 'mlr-cpp',
     title: 'MLR C++',
     client: 'Numerical Systems',
-    year: '2024',
+    year: '2025',
     image: mlrRegression,
     summary: 'A fast multiple linear regression library with a Python-facing API and C++ core.',
     url: 'https://github.com/Sidhant-1299/mlr_cpp',

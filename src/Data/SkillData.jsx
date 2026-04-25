@@ -17,6 +17,7 @@ export const skills = [
   { id: 'chrome-extension', label: 'Chrome Extension', group: 'Interface' },
   { id: 'interactive-ui', label: 'Interactive UI', group: 'Interface' },
   { id: 'apis', label: 'APIs', group: 'Systems' },
+  { id: 'sql', label: 'SQL', group: 'Systems'}
 ]
 
 export const tools = ['Git', 'GitHub', 'Jupyter', 'Numpy', 'PyTorch', ]
