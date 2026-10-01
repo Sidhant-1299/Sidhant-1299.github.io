@@ -1,4 +1,5 @@
-import { Suspense, lazy, startTransition, useEffect, useState } from 'react'
+import { Suspense, lazy, startTransition, useEffect, useRef, useState } from 'react'
+import useRouteGestures from './hooks/useRouteGestures.js'
 
 const Home = lazy(() => import('./pages/Home.jsx'))
 const Work = lazy(() => import('./pages/Work.jsx'))
@@ -55,6 +56,7 @@ function isNavItemActive(href, pathname) {
 }
 
 function App() {
+  const stageRef = useRef(null)
   const [routeFrame, setRouteFrame] = useState(() => ({
     pathname: getPathname(),
     exitingPathname: null,
@@ -106,6 +108,15 @@ function App() {
     })
     window.scrollTo({ top: 0, behavior: 'instant' })
   }
+
+  useRouteGestures({
+    stageRef,
+    pathname,
+    routes: routeOrder,
+    transitioning: Boolean(routeFrame.exitingPathname),
+    navigate: navigateTo,
+    duration: routeTransitionDuration,
+  })
 
   function handleRouteClick(event) {
     if (event.defaultPrevented || event.button !== 0) {
@@ -199,9 +210,15 @@ function App() {
         </div>
       </nav>
 
-      <div className="route-stage pb-[calc(5.75rem+env(safe-area-inset-bottom))] sm:pb-0" data-direction={routeFrame.direction}>
+      <div
+        ref={stageRef}
+        className="route-stage pb-[calc(5.75rem+env(safe-area-inset-bottom))] sm:pb-0"
+        data-direction={routeFrame.direction}
+        data-top-level={routeOrder.includes(pathname) ? 'true' : undefined}
+        data-transition={routeOrder.includes(pathname) && routeOrder.includes(routeFrame.exitingPathname) ? 'horizontal' : undefined}
+      >
         {routeFrame.exitingPathname ? (
-          <div className="route-layer route-layer-exit" key={`exit-${routeFrame.exitingPathname}-${routeFrame.transitionId}`}>
+          <div className="route-layer route-layer-exit" inert aria-hidden="true" key={`exit-${routeFrame.exitingPathname}-${routeFrame.transitionId}`}>
             <Suspense fallback={<RouteLoading />}>
               <RouteContent pathname={routeFrame.exitingPathname} />
             </Suspense>

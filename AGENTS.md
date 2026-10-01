@@ -106,6 +106,9 @@
 - About Page 2026-04-24: Profile/contact content now lives in `src/Data/ProfileData.jsx`; `/about` includes GitHub, LinkedIn, Twitter/X, resume, credibility blocks, and a no-backend contact form with local status feedback. Do not publish a direct personal email on the page.
 - Motion/Nav 2026-04-24: Desktop and 390px mobile checks passed for `/`, `/work`, `/academic`, `/about`, `/projects/semantic-book-recommender`, and a missing project slug; no console warnings/errors or horizontal overflow before the dev server was stopped.
 - Motion/Nav 2026-04-24: Mobile nav uses a compact glass dropdown with hidden closed-state links removed from tab order; route transitions render enter/exit layers and respect reduced-motion preferences.
+- Route Carousel 2026-09-30 — Blocking fixes: Resolved and verified with actual Playwright MCP at 1440×900 and 390×844. Prevent native drag for eligible pointer gestures even when `dragstart` targets selected text; regression-test a bounded About swipe followed by reverse on the same heading without clearing selection. Preserve descendant touch capture transfers, interactive exclusions, native vertical scrolling, and bounded route order.
+- Route Carousel 2026-09-30 — Verification: Sequential mouse and real CDP touch gestures, nav/URL synchronization, history, wheel direction, project-detail exclusions, image loading, and reduced-motion hidden exits passed; no console warnings/errors or horizontal overflow during/after transitions. Academic Math retains Probability and Linear algebra without Direction; neighboring skills/tools/credentials remain intact.
+- Route Carousel 2026-09-30 — Optional polish: None identified. Mobile now uses the persistent bottom pill navigation; the earlier dropdown note describes superseded behavior.
 
 ## Change Strategy
 - Because the current app is tiny, prefer the smallest working change in `src/App.jsx` until a second page or genuinely reusable UI forces extraction.

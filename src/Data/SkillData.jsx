@@ -9,6 +9,7 @@ export const skills = [
   { id: 'kmeans', label: 'K-Means', group: 'Machine Learning' },
   { id: 'perceptron', label: 'Perceptron', group: 'Machine Learning' },
   { id: 'linear-algebra', label: 'Linear Algebra', group: 'Math' },
+  { id: 'probability', label: 'Probability', group: 'Math' },
   { id: 'pandas', label: 'Pandas', group: 'Data' },
   { id: 'eda', label: 'EDA', group: 'Data' },
   { id: 'visualization', label: 'Visualization', group: 'Data' },
