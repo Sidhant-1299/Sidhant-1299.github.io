@@ -74,15 +74,6 @@ function Academic() {
           </section>
         </aside>
       </section>
-
-      <section className="mt-16 rounded-[2rem] border border-[var(--line-0)] bg-[var(--bg-1)]/60 p-6 text-center shadow-[0_18px_60px_rgba(0,0,0,0.26)] md:p-10 lg:p-14">
-        <div className="mx-auto max-w-5xl">
-          <Eyebrow>Academic direction</Eyebrow>
-          <p className="mt-6 text-3xl font-semibold leading-[0.98] tracking-[-0.04em] text-[var(--text-0)] md:text-5xl lg:text-6xl">
-            The through-line is practical data work: learn the math, test it in code, then shape the result into something readable.
-          </p>
-        </div>
-      </section>
     </PageShell>
   )
 }

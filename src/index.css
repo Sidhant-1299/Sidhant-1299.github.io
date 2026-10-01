@@ -92,6 +92,38 @@ a {
   animation-name: route-exit-back;
 }
 
+.route-stage[data-top-level="true"] {
+  touch-action: pan-y pinch-zoom;
+  overscroll-behavior-x: contain;
+}
+
+.route-stage[data-transition="horizontal"] {
+  --route-slide: 100%;
+}
+
+.route-stage[data-transition="horizontal"][data-direction="back"] {
+  --route-slide: -100%;
+}
+
+.route-stage[data-transition="horizontal"] .route-layer-enter {
+  animation-name: route-slide-enter;
+}
+
+.route-stage[data-transition="horizontal"] .route-layer-exit {
+  animation-name: route-slide-exit;
+  animation-duration: 560ms;
+}
+
+@keyframes route-slide-enter {
+  from { transform: translate3d(var(--route-slide), 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes route-slide-exit {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(calc(-1 * var(--route-slide)), 0, 0); }
+}
+
 .resume-attention {
   animation: resume-attention-bounce 920ms cubic-bezier(0.22, 1, 0.36, 1) 180ms 2;
 }
@@ -189,6 +221,10 @@ a {
   .route-layer-enter,
   .route-layer-exit {
     animation-name: route-fade-reduced !important;
+  }
+
+  .route-layer-exit {
+    display: none;
   }
 
   .nav-active-pill {
