@@ -61,11 +61,229 @@ a {
   position: relative;
   overflow-x: clip;
   isolation: isolate;
+  padding-bottom: calc(5.75rem + env(safe-area-inset-bottom));
+}
+
+.route-dock {
+  position: fixed;
+  inset: auto 0.75rem calc(0.75rem + env(safe-area-inset-bottom));
+  z-index: 50;
+}
+
+.route-hint-shell {
+  position: fixed;
+  top: 10px;
+  right: 0.75rem;
+  z-index: 60;
+  width: 176px;
+}
+
+.route-hint {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 4px;
+}
+
+.route-hint-arrow {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-1);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.route-hint-arrow:hover:not([aria-disabled="true"]) {
+  background: var(--bg-2);
+  border-color: var(--clay);
+}
+
+.route-hint-arrow:focus-visible {
+  outline: 2px solid var(--accent-ivory);
+  outline-offset: 3px;
+}
+
+.route-hint-arrow[aria-disabled="true"] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.route-hint-arrow[aria-disabled="true"]:focus-visible {
+  opacity: 1;
+  color: var(--text-2);
+}
+
+.route-discovery-cue {
+  display: none;
+}
+
+.route-hint-center {
+  text-align: center;
+}
+
+.route-hint-status {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--text-1);
+  font-size: 0.5625rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.route-hint-index {
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.route-hint-marks {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 3px 0 4px;
+}
+
+.route-hint-marks span {
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--line-1);
+}
+
+.route-hint-marks span[data-active="true"] {
+  background: var(--accent-ivory);
+  box-shadow: 0 2px 0 var(--accent-red);
+}
+
+.route-hint-instructions {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 0.5625rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .route-dock {
+    display: none;
+  }
+
+  .route-hint-shell {
+    top: auto;
+    right: auto;
+    bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    inset-inline: auto;
+    left: 50%;
+    width: 360px;
+    transform: translateX(-50%);
+    padding: 0.25rem;
+    border: 1px solid var(--line-1);
+    border-radius: 2rem;
+    background: rgb(26 21 21 / 88%);
+    box-shadow: 0 12px 40px rgb(0 0 0 / 28%);
+    backdrop-filter: blur(20px);
+  }
+
+  .route-hint {
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .route-hint-arrow {
+    border-color: var(--line-1);
+    color: var(--accent-ivory);
+    font-size: 1.125rem;
+  }
+
+  .route-hint-status {
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+  }
+
+  .route-hint-marks {
+    gap: 5px;
+    margin: 3px 0 7px;
+  }
+
+  .route-hint-marks span {
+    width: 24px;
+  }
+
+  .route-hint-instructions {
+    font-size: 0.625rem;
+    line-height: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .route-stage {
+    padding-bottom: 0;
+  }
+
+  .route-stage[data-top-level="true"] {
+    padding-bottom: calc(7rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Keep the glass rail out of the imagery when there is no desktop negative space. */
+@media (min-width: 640px) and (max-width: 1023px), (min-width: 640px) and (max-height: 520px) {
+  .route-discovery-cue {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 0.5rem;
+    pointer-events: none;
+  }
+
+  .route-discovery-cue p {
+    width: 23rem;
+    margin: 0;
+    color: var(--text-2);
+    font-size: 0.625rem;
+    line-height: 1rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .route-hint-shell {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin: 0 auto calc(0.75rem + env(safe-area-inset-bottom));
+    transform: none;
+  }
+
+  .route-stage[data-top-level="true"] {
+    padding-bottom: 1rem;
+  }
+}
+
+/* The full-height poster already clears the rail on roomy desktop screens. */
+@media (min-width: 1024px) and (min-height: 850px) {
+  .route-stage[data-home="true"] {
+    padding-bottom: 0;
+  }
 }
 
 .route-layer {
   width: 100%;
   transform-origin: 50% 8rem;
+  transform: translate3d(var(--route-drag-x, 0px), 0, 0);
+}
+
+.route-stage[data-dragging="true"] > .route-layer {
+  will-change: transform;
+}
+
+.route-stage[data-settling="true"] > .route-layer {
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .route-layer-enter,
@@ -92,9 +310,10 @@ a {
   animation-name: route-exit-back;
 }
 
-.route-stage[data-top-level="true"] {
-  touch-action: pan-y pinch-zoom;
-  overscroll-behavior-x: contain;
+.app-root[data-route-gestures="true"] {
+  /* Direction is claimed by the nonpassive touch handler, not an ancestor
+     pan-y restriction that would disable nested horizontal scrollers. */
+  touch-action: auto;
 }
 
 .route-stage[data-transition="horizontal"] {
@@ -107,20 +326,21 @@ a {
 
 .route-stage[data-transition="horizontal"] .route-layer-enter {
   animation-name: route-slide-enter;
+  animation-duration: var(--route-settle-duration, 280ms);
 }
 
 .route-stage[data-transition="horizontal"] .route-layer-exit {
   animation-name: route-slide-exit;
-  animation-duration: 560ms;
+  animation-duration: var(--route-settle-duration, 280ms);
 }
 
 @keyframes route-slide-enter {
-  from { transform: translate3d(var(--route-slide), 0, 0); }
+  from { transform: translate3d(calc(var(--route-slide) + var(--route-drag-start, 0px)), 0, 0); }
   to { transform: translate3d(0, 0, 0); }
 }
 
 @keyframes route-slide-exit {
-  from { transform: translate3d(0, 0, 0); }
+  from { transform: translate3d(var(--route-drag-start, 0px), 0, 0); }
   to { transform: translate3d(calc(-1 * var(--route-slide)), 0, 0); }
 }
 
@@ -225,6 +445,10 @@ a {
 
   .route-layer-exit {
     display: none;
+  }
+
+  .route-layer {
+    transform: none;
   }
 
   .nav-active-pill {

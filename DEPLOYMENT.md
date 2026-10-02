@@ -1,8 +1,8 @@
 # Deployment
 
 ## Current Status
-- This portfolio is prepared for deployment, but the repository is not actively deployed yet.
-- GitHub Pages is the likely first target because this repo is named `Sidhant-1299.github.io`.
+- This portfolio deploys through GitHub Actions to GitHub Pages when `main` changes.
+- The live custom domain is `https://sidhantkhati.com/`, with HTTPS enforced.
 - Keep deployment-specific decisions in this file so future hosting changes can be made quickly without searching through app code.
 
 ## GitHub Pages

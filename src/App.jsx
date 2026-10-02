@@ -1,10 +1,32 @@
-import { Suspense, lazy, startTransition, useEffect, useRef, useState } from 'react'
+import { Suspense, createElement, lazy, startTransition, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import useRouteGestures from './hooks/useRouteGestures.js'
 
-const Home = lazy(() => import('./pages/Home.jsx'))
-const Work = lazy(() => import('./pages/Work.jsx'))
-const Academic = lazy(() => import('./pages/Academic.jsx'))
-const About = lazy(() => import('./pages/About.jsx'))
+const primaryPageLoaders = {
+  '/': () => import('./pages/Home.jsx'),
+  '/work': () => import('./pages/Work.jsx'),
+  '/academic': () => import('./pages/Academic.jsx'),
+  '/about': () => import('./pages/About.jsx'),
+}
+const loadedPrimaryPages = new Map()
+const primaryPagePromises = new Map()
+
+function loadPrimaryPage(pathname) {
+  if (!primaryPagePromises.has(pathname)) {
+    const promise = primaryPageLoaders[pathname]().then((module) => {
+      loadedPrimaryPages.set(pathname, createElement(module.default))
+      return module
+    })
+    primaryPagePromises.set(pathname, promise)
+    // Permit a later navigation to retry a failed prefetch.
+    promise.catch(() => primaryPagePromises.delete(pathname))
+  }
+  return primaryPagePromises.get(pathname)
+}
+
+const Home = lazy(() => loadPrimaryPage('/'))
+const Work = lazy(() => loadPrimaryPage('/work'))
+const Academic = lazy(() => loadPrimaryPage('/academic'))
+const About = lazy(() => loadPrimaryPage('/about'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'))
 
 const navItems = [
@@ -16,6 +38,7 @@ const navItems = [
 
 const routeOrder = ['/', '/work', '/academic', '/about']
 const routeTransitionDuration = 560
+const carouselTransitionDuration = 280
 
 function getPathname() {
   return window.location.pathname || '/'
@@ -34,7 +57,7 @@ function getRouteDirection(fromPathname, toPathname) {
   return getRouteRank(toPathname) >= getRouteRank(fromPathname) ? 'forward' : 'back'
 }
 
-function createRouteFrame(currentFrame, nextPathname) {
+function createRouteFrame(currentFrame, nextPathname, metadata = {}) {
   if (nextPathname === currentFrame.pathname) {
     return currentFrame
   }
@@ -44,6 +67,9 @@ function createRouteFrame(currentFrame, nextPathname) {
     exitingPathname: currentFrame.pathname,
     direction: getRouteDirection(currentFrame.pathname, nextPathname),
     transitionId: currentFrame.transitionId + 1,
+    dragOffset: metadata.dragOffset || 0,
+    outgoingScrollY: metadata.outgoingScrollY || 0,
+    duration: routeOrder.includes(currentFrame.pathname) && routeOrder.includes(nextPathname) ? carouselTransitionDuration : routeTransitionDuration,
   }
 }
 
@@ -56,28 +82,45 @@ function isNavItemActive(href, pathname) {
 }
 
 function App() {
+  const rootRef = useRef(null)
   const stageRef = useRef(null)
+  const hintNavigationTimeRef = useRef(-Infinity)
   const [routeFrame, setRouteFrame] = useState(() => ({
     pathname: getPathname(),
     exitingPathname: null,
     direction: 'forward',
     transitionId: 0,
+    dragOffset: 0,
+    outgoingScrollY: 0,
+    duration: routeTransitionDuration,
   }))
 
   const pathname = routeFrame.pathname
+  const primaryRouteIndex = routeOrder.indexOf(pathname)
   const activeNavIndex = navItems.findIndex((item) => isNavItemActive(item.href, pathname))
 
   useEffect(() => {
+    if (primaryRouteIndex === -1) return
+    // Warm the small page modules in parallel; first-time swipes should reveal
+    // actual content, not spend their transition animating a loading frame.
+    for (const route of routeOrder) loadPrimaryPage(route).catch(() => {})
+  }, [primaryRouteIndex])
+
+  useEffect(() => {
     function handlePopState() {
+      const outgoingScrollY = window.scrollY
       startTransition(() => {
-        setRouteFrame((currentFrame) => createRouteFrame(currentFrame, getPathname()))
+        setRouteFrame((currentFrame) => createRouteFrame(currentFrame, getPathname(), { outgoingScrollY }))
       })
-      window.scrollTo({ top: 0, behavior: 'instant' })
     }
 
     window.addEventListener('popstate', handlePopState)
     return () => window.removeEventListener('popstate', handlePopState)
   }, [])
+
+  useLayoutEffect(() => {
+    if (routeFrame.transitionId) window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [routeFrame.transitionId])
 
   useEffect(() => {
     if (!routeFrame.exitingPathname) {
@@ -92,30 +135,40 @@ function App() {
 
         return { ...currentFrame, exitingPathname: null }
       })
-    }, routeTransitionDuration)
+    }, routeFrame.duration)
 
     return () => window.clearTimeout(timeoutId)
-  }, [routeFrame.exitingPathname, routeFrame.transitionId])
+  }, [routeFrame.exitingPathname, routeFrame.transitionId, routeFrame.duration])
 
-  function navigateTo(href) {
+  function navigateTo(href, metadata = {}) {
     if (href === pathname) {
       return
     }
 
     window.history.pushState({}, '', href)
+    const transitionMetadata = { outgoingScrollY: window.scrollY, ...metadata }
     startTransition(() => {
-      setRouteFrame((currentFrame) => createRouteFrame(currentFrame, href))
+      setRouteFrame((currentFrame) => createRouteFrame(currentFrame, href, transitionMetadata))
     })
-    window.scrollTo({ top: 0, behavior: 'instant' })
+  }
+
+  function navigateFromHint(index) {
+    if (routeFrame.exitingPathname || primaryRouteIndex === -1 || !navItems[index] || performance.now() - hintNavigationTimeRef.current < carouselTransitionDuration) {
+      return
+    }
+
+    hintNavigationTimeRef.current = performance.now()
+    navigateTo(navItems[index].href)
   }
 
   useRouteGestures({
+    rootRef,
     stageRef,
     pathname,
     routes: routeOrder,
     transitioning: Boolean(routeFrame.exitingPathname),
     navigate: navigateTo,
-    duration: routeTransitionDuration,
+    duration: carouselTransitionDuration,
   })
 
   function handleRouteClick(event) {
@@ -149,7 +202,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--bg-0)] text-[var(--text-0)] selection:bg-[var(--accent-red)]/40 selection:text-[var(--text-0)]" onClickCapture={handleRouteClick}>
+    <div ref={rootRef} data-route-gestures={primaryRouteIndex !== -1 ? 'true' : undefined} className="app-root min-h-screen bg-[var(--bg-0)] text-[var(--text-0)] selection:bg-[var(--accent-red)]/40 selection:text-[var(--text-0)]" onClickCapture={handleRouteClick}>
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(140,56,54,0.18),transparent_34rem),linear-gradient(180deg,rgba(35,29,28,0.72),transparent_24rem)]" />
       <header className="sticky top-0 z-50 border-b border-[var(--line-0)] bg-[var(--bg-0)]/72 shadow-[0_12px_48px_rgba(0,0,0,0.18)] backdrop-blur-xl transition-[background,border-color,box-shadow] duration-300">
         <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-3 sm:px-4 md:px-10 lg:px-16" aria-label="Primary navigation">
@@ -184,9 +237,14 @@ function App() {
             })}
           </div>
         </nav>
+        {primaryRouteIndex !== -1 ? (
+          <div className="route-discovery-cue mx-auto max-w-7xl px-3 sm:px-4 md:px-10 lg:px-16" aria-hidden="true">
+            <p><span className="sm:hidden">← Swipe across content →</span><span className="hidden sm:inline">← Drag imagery or scroll sideways →</span></p>
+          </div>
+        ) : null}
       </header>
 
-      <nav className="fixed inset-x-3 z-50 sm:hidden bottom-[calc(0.75rem+env(safe-area-inset-bottom))]" aria-label="Primary mobile navigation">
+      <nav className="route-dock sm:hidden" aria-label="Primary mobile navigation">
         <div className="grid grid-cols-4 overflow-hidden rounded-full border border-[var(--line-0)] bg-[var(--bg-1)]/88 p-1 shadow-[0_18px_60px_rgba(0,0,0,0.42)] backdrop-blur-xl">
           {navItems.map((item) => {
             const isActive = isNavItemActive(item.href, pathname)
@@ -212,13 +270,16 @@ function App() {
 
       <div
         ref={stageRef}
-        className="route-stage pb-[calc(5.75rem+env(safe-area-inset-bottom))] sm:pb-0"
+        id="route-stage"
+        className="route-stage"
         data-direction={routeFrame.direction}
+        data-home={pathname === '/' ? 'true' : undefined}
         data-top-level={routeOrder.includes(pathname) ? 'true' : undefined}
         data-transition={routeOrder.includes(pathname) && routeOrder.includes(routeFrame.exitingPathname) ? 'horizontal' : undefined}
+        style={{ '--route-drag-start': `${routeFrame.dragOffset}px`, '--route-settle-duration': `${routeFrame.duration}ms` }}
       >
         {routeFrame.exitingPathname ? (
-          <div className="route-layer route-layer-exit" inert aria-hidden="true" key={`exit-${routeFrame.exitingPathname}-${routeFrame.transitionId}`}>
+          <div className="route-layer route-layer-exit" style={{ top: -routeFrame.outgoingScrollY }} inert aria-hidden="true" key={`exit-${routeFrame.exitingPathname}-${routeFrame.transitionId}`}>
             <Suspense fallback={<RouteLoading />}>
               <RouteContent pathname={routeFrame.exitingPathname} />
             </Suspense>
@@ -230,11 +291,72 @@ function App() {
           </Suspense>
         </div>
       </div>
+      {primaryRouteIndex !== -1 ? (
+        <div className="route-hint-shell">
+          <RouteHint index={primaryRouteIndex} transitioning={Boolean(routeFrame.exitingPathname)} onNavigate={navigateFromHint} />
+        </div>
+      ) : null}
     </div>
   )
 }
 
+function RouteHint({ index, transitioning, onNavigate }) {
+  // Keep unavailable end arrows focusable so reaching an endpoint does not
+  // drop keyboard focus and prevent immediate reversal with the arrow keys.
+  function handleKeyDown(event) {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || !['ArrowLeft', 'ArrowRight'].includes(event.key)) {
+      return
+    }
+
+    event.preventDefault()
+    onNavigate(index + (event.key === 'ArrowRight' ? 1 : -1))
+  }
+
+  return (
+    <section className="route-hint" aria-label="Explore portfolio pages" aria-describedby="route-hint-instructions" onKeyDown={handleKeyDown}>
+      <button
+        type="button"
+        className="route-hint-arrow"
+        aria-label={index > 0 ? `Previous page: ${navItems[index - 1].label}` : 'Previous page (start of portfolio)'}
+        aria-controls="route-stage"
+        aria-disabled={transitioning || index === 0}
+        onClick={() => onNavigate(index - 1)}
+      >
+        <span aria-hidden="true">←</span>
+      </button>
+      <div className="route-hint-center">
+        <div className="route-hint-status" role="status" aria-live="polite" aria-atomic="true">
+          <span aria-hidden="true" className="route-hint-index">{String(index + 1).padStart(2, '0')} / {String(navItems.length).padStart(2, '0')}</span>
+          <span className="sr-only">Page {index + 1} of {navItems.length}: </span>
+          <span className="sr-only sm:not-sr-only">{navItems[index].label}</span>
+        </div>
+        <div className="route-hint-marks" aria-hidden="true">
+          {navItems.map((item, markIndex) => <span key={item.href} data-active={markIndex === index ? 'true' : undefined} />)}
+        </div>
+        <p id="route-hint-instructions" className="route-hint-instructions">
+          <span className="hidden sm:inline">Drag imagery or scroll sideways</span>
+          <span className="sm:hidden">Swipe across content</span>
+          <span className="sr-only">. Use the previous and next buttons, or left and right arrow keys while focused here, to explore the four pages.</span>
+        </p>
+      </div>
+      <button
+        type="button"
+        className="route-hint-arrow"
+        aria-label={index < navItems.length - 1 ? `Next page: ${navItems[index + 1].label}` : 'Next page (end of portfolio)'}
+        aria-controls="route-stage"
+        aria-disabled={transitioning || index === navItems.length - 1}
+        onClick={() => onNavigate(index + 1)}
+      >
+        <span aria-hidden="true">→</span>
+      </button>
+    </section>
+  )
+}
+
 function RouteContent({ pathname }) {
+  const loadedPage = loadedPrimaryPages.get(pathname)
+  if (loadedPage) return loadedPage
+
   if (pathname === '/') {
     return <Home />
   }
